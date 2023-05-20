@@ -1,0 +1,72 @@
+.heading-custom-software{
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.para-custom-software{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.list-custom-software{
+    color: white;
+    line-height: 35px;
+}
+.list-custom-software ul{
+    line-height: 35px;
+}
+
+.btn-custom{
+    background:transparent;
+    color: white;
+    border: 2px solid var(--primary-color);
+    letter-spacing: 1;
+    transition: 0.8s ease;
+}
+.btn-custom:hover{
+    background: transparent;
+    color: white;
+   background: var(--primary-color);
+
+}
+.bg-custom-software{
+    background: #000;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+.bg-col-grow{
+    background: var(--primary-color);
+}
+@media screen and(max-width:768px) {
+    .heading-custom-software{
+        font-size: 25px;
+        text-align: center;
+    }
+    .para-custom-software{
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .list-custom-software{
+        text-align: center;
+    }
+    .btn-link{
+        justify-content: center;
+        display: flex;
+        text-decoration: none;
+       
+    }
+    .btn-custom{
+        width: 50rem;
+    }
+}
+
+@media  screen and (max-width:1008px){
+.bg-col-grow{
+    margin-top: 3rem;
+    transition: 0.9s ease-in;
+}
+
+    
+}

@@ -1,0 +1,37 @@
+.container-hero-service-page {
+  height: 90vh;
+
+  display: flex;
+  align-items: center;
+
+}
+
+.bg-service-page {
+  background: linear-gradient(200deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://learnenglish.britishcouncil.org/sites/podcasts/files/RS8118_GettyImages-935659716-hig.jpeg");
+
+  // background: linear-gradient(400deg,rgba(0, 0, 0, 0.854),  rgba(10, 83, 83, 0.611) 100%), url("https://img.freepik.com/free-photo/business-people-shaking-hands-together_53876-30568.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: auto;
+}
+.hero-heading-service{
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 70px;
+}
+.service-hero-para{
+  color: var(--primary-color);
+}
+
+@media screen and (max-width:768px) {
+  .hero-heading-service{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 70px;
+  }
+}

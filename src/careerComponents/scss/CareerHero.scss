@@ -1,0 +1,40 @@
+.container-hero-career-page {
+    height: 90vh;
+  
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .bg-hero-career-page{
+    background: linear-gradient(200deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("https://www.key.com/content/dam/kco/images/businesses-institutions/industry-expertise/advisor_homepage_cropped.jpg");
+  
+    // background: linear-gradient(400deg,rgba(0, 0, 0, 0.854),  rgba(10, 83, 83, 0.611) 100%), url("https://img.freepik.com/free-photo/business-people-shaking-hands-together_53876-30568.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+  }
+  .hero-heading-career-page{
+     font-size: 70px;
+     font-weight: bold;
+     letter-spacing: 3px;
+     color: white;
+  }
+  .career-heading-para{
+    color: var(--primary-color);
+    width: 40rem;
+  }
+  
+  @media screen and (max-width:768px){
+    .hero-heading-career-page{
+       
+        font-size: 35px;
+    }
+    .career-heading-para{
+      font-size: 14px;
+     width: 20rem;
+    }
+  }

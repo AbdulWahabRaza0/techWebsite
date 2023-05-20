@@ -1,0 +1,19 @@
+.bg-career-letsexplore{
+    background: #000;
+}
+.img-career{
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url(https://www.rrc.ca/explore/wp-content/uploads/sites/1/sites/98/2022/09/Business-Interest.jpg);
+    height: 35vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.loream{
+    color: var(--primary-color);
+}
