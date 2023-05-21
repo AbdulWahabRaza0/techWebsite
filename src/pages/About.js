@@ -1,13 +1,20 @@
 import React from "react";
-import AboutHero from "../components/aboutComponent/AboutHero";
-import AboutSer from "../components/aboutComponent/AboutSer";
-import History from "../components/aboutComponent/History";
-import AboutTes from "../components/aboutComponent/AboutTes";
-import AboutContact from "../components/aboutComponent/AboutContact";
+import Hero from "../components/Common/Hero";
+import AboutSer from "../components/AboutComponent/AboutSer";
+import History from "../components/AboutComponent/History";
+import AboutTes from "../components/AboutComponent/AboutTes";
+import AboutContact from "../components/AboutComponent/AboutContact";
 const About = () => {
   return (
     <>
-      <AboutHero />
+      <Hero
+        bg="https://www.capgemini.com/de-de/wp-content/uploads/sites/8/2022/08/GettyImages-1181008199.jpg"
+        extra="tech"
+        title="About us"
+        desc=" Proudly serving the world’s top asset finance and leasing
+              companies with smart software technology for over four decades."
+        contact={true}
+      />
       <AboutSer />
       <History />
       <AboutTes />

@@ -1,8 +1,7 @@
 import React from "react";
-import tech from "../assets/tech.png";
-import { Wrapper, SpanWrapper, Row, Col } from "./Layouts";
-import { H3, H4, P } from "./Typography";
-import { PrimaryBtn } from "./Buttons";
+import tech from "../../assets/tech.png";
+import { Wrapper, SpanWrapper, Row, Col } from "../Layouts";
+import { H3, H4, P } from "../Typography";
 import styled from "styled-components";
 const UL = styled.ul``;
 const LI = styled.li`

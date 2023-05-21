@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper } from "./Layouts";
+import { Wrapper } from "../Layouts";
 import styled from "styled-components";
 const LetTalkStyle = styled.div`
   border: 2px solid #16a092;

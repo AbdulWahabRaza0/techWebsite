@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import tech from "../assets/tech.png";
-import { useMediaQuery, Wrapper } from "./Layouts";
-import { HeaderBtn } from "./Buttons";
+import tech from "../../assets/tech.png";
+import { useMediaQuery, Wrapper } from "../Layouts";
+import { HeaderBtn } from "../Buttons";
 import styled from "styled-components";
 
 const HeaderStyle = styled.div`
@@ -56,6 +56,7 @@ const UL = styled.ul`
   margin-right: ${(props) => (props.mr ? props.mr : "")};
   .navbar-scrolled {
     background-color: rgb(255, 255, 255);
+
     transition: 0.5s ease;
   }
 
@@ -72,7 +73,7 @@ const UL = styled.ul`
   }
 
   .navbar-a-scrolled {
-    color: #000000;
+    color: black;
     &:hover {
       background: rgba(0, 0, 0, 0.1);
     }

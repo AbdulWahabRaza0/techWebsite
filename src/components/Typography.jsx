@@ -19,6 +19,8 @@ const H1 = styled.h1`
   margin-top: ${(props) => (props.mt ? props.mt : "")};
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
   margin: ${(props) => (props.m ? props.m : "")};
+  background: ${(props) => (props.bg ? props.bg : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H2 = styled.h2`
   font-style: normal;
@@ -39,6 +41,8 @@ const H2 = styled.h2`
   margin-top: ${(props) => (props.mt ? props.mt : "")};
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
   margin: ${(props) => (props.m ? props.m : "")};
+  background: ${(props) => (props.bg ? props.bg : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H3 = styled.h3`
   font-style: normal;
@@ -59,6 +63,8 @@ const H3 = styled.h3`
   margin-top: ${(props) => (props.mt ? props.mt : "")};
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
   margin: ${(props) => (props.m ? props.m : "")};
+  background: ${(props) => (props.bg ? props.bg : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H4 = styled.h4`
   font-style: normal;
@@ -79,6 +85,8 @@ const H4 = styled.h4`
   margin-top: ${(props) => (props.mt ? props.mt : "")};
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
   margin: ${(props) => (props.m ? props.m : "")};
+  background: ${(props) => (props.bg ? props.bg : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H5 = styled.h5`
   font-style: normal;
@@ -99,6 +107,8 @@ const H5 = styled.h5`
   margin-top: ${(props) => (props.mt ? props.mt : "")};
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
   margin: ${(props) => (props.m ? props.m : "")};
+  background: ${(props) => (props.bg ? props.bg : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H6 = styled.h6`
   font-style: normal;
@@ -119,6 +129,8 @@ const H6 = styled.h6`
   margin-top: ${(props) => (props.mt ? props.mt : "")};
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
   margin: ${(props) => (props.m ? props.m : "")};
+  background: ${(props) => (props.bg ? props.bg : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const P = styled.p`
   font-style: normal;
@@ -139,5 +151,7 @@ const P = styled.p`
   margin-top: ${(props) => (props.mt ? props.mt : "")};
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
   margin: ${(props) => (props.m ? props.m : "")};
+  background: ${(props) => (props.bg ? props.bg : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 export { H1, H2, H3, H4, H5, H6, P };

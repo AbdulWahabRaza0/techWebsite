@@ -1,7 +1,7 @@
 import React from "react";
-import { Wrapper, useMediaQuery } from "./Layouts";
-import { H1 } from "./Typography";
-import { PrimaryBtn } from "./Buttons";
+import { Wrapper, useMediaQuery } from "../Layouts";
+import { H1 } from "../Typography";
+import { PrimaryBtn } from "../Buttons";
 const HugeSec = () => {
   const isResponsive = useMediaQuery({
     query: "(max-width: 768px)",

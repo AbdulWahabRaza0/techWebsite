@@ -1,10 +1,10 @@
 import React from "react";
-import bag from "../assets/bag.png";
-import lock from "../assets/lock.png";
-import tag from "../assets/tag.png";
-import login from "../assets/login.png";
-import { useMediaQuery } from "./Layouts";
-import { H3 } from "./Typography";
+import bag from "../../assets/bag.png";
+import lock from "../../assets/lock.png";
+import tag from "../../assets/tag.png";
+import login from "../../assets/login.png";
+import { useMediaQuery } from "../Layouts";
+import { H3 } from "../Typography";
 import styled from "styled-components";
 const SectionDel = styled.section`
   background: linear-gradient(177deg, rgb(0, 0, 0) 40%, rgb(10, 83, 83) 100%);

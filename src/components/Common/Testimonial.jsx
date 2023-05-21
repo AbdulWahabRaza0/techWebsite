@@ -1,8 +1,8 @@
 import React from "react";
-import karl from "../assets/karl.png";
-import devid from "../assets/devid.png";
+import karl from "../../assets/karl.png";
+import devid from "../../assets/devid.png";
 import styled from "styled-components";
-import { Wrapper, SpanWrapper } from "./Layouts";
+import { Wrapper, SpanWrapper } from "../Layouts";
 const TestimonialSection = styled.section`
   display: grid;
   place-items: center;

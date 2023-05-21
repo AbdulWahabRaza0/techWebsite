@@ -1,9 +1,9 @@
 import React from "react";
-import building from "../assets/building.png";
-import { Wrapper, useMediaQuery } from "./Layouts";
-import { H1, P } from "./Typography";
+import building from "../../assets/building.png";
+import { Wrapper, useMediaQuery } from "../Layouts";
+import { H1, P } from "../Typography";
 import styled from "styled-components";
-import { PrimaryBtn } from "./Buttons";
+import { PrimaryBtn } from "../Buttons";
 const ContactFormStyle = styled.div`
   height: 100%;
   width: 100%;

@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery, Wrapper, SpanWrapper } from "./Layouts";
+import { useMediaQuery, Wrapper, SpanWrapper } from "../Layouts";
 import ParticlesBg from "./ParticlesBg/ParticlesBg";
 const HeroSection = () => {
   const isResponsive = useMediaQuery({
