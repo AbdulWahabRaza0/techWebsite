@@ -18,7 +18,12 @@ const App = () => {
     <>
       <Wrapper>
         <Wrapper
-          style={{ position: "fixed", bottom: "5%", right: "5%", zIndex: 1 }}
+          style={{
+            position: "fixed",
+            bottom: "5%",
+            right: "5%",
+            zIndex: 1,
+          }}
         >
           <a
             href="https://api.whatsapp.com/send?phone=03117851141&text=Hello Raza"
