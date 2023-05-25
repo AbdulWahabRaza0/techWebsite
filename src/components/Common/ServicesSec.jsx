@@ -18,6 +18,7 @@ const ServicesSec = (props) => {
   const isResponsiveMore = useMediaQuery({
     query: "(min-width: 992px)",
   });
+
   return (
     <>
       <SectionStyle p={isResponsive && "0 2rem"}>
@@ -25,6 +26,7 @@ const ServicesSec = (props) => {
           {props.page === "home" && (
             <>
               <Wrapper
+                data-aos="fade-down"
                 width="100%"
                 className="d-flex flex-wrap justify-content-center pb-5"
               >
@@ -48,6 +50,21 @@ const ServicesSec = (props) => {
                 <>
                   <Wrapper
                     key={index}
+                    data-aos={
+                      index === 0
+                        ? "fade-down-right"
+                        : index === 1
+                        ? "fade-down"
+                        : index === 2
+                        ? "fade-down-left"
+                        : index === 3
+                        ? "fade-up-right"
+                        : index === 4
+                        ? "fade-up"
+                        : index === 5
+                        ? "fade-up-left"
+                        : ""
+                    }
                     maxW={
                       (isResponsiveMore && "0 0 33.33%") ||
                       (isResponsive && "50%")

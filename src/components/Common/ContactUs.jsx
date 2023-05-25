@@ -80,10 +80,26 @@ const ContactUs = () => {
               :032219903230 or email: info@tech.com
             </P>
             <form className="position-relative mt-5" action="">
-              <InputStyle type="" placeholder="your name" required />
-              <InputStyle type="" placeholder="email" required />
-              <InputStyle type="" placeholder="write a subject" required />
+              <InputStyle
+                data-aos="fade-up"
+                type=""
+                placeholder="your name"
+                required
+              />
+              <InputStyle
+                data-aos="fade-up"
+                type=""
+                placeholder="email"
+                required
+              />
+              <InputStyle
+                data-aos="fade-up"
+                type=""
+                placeholder="write a subject"
+                required
+              />
               <TextAreaStyle
+                data-aos="fade-up"
                 name=""
                 id=""
                 cols="30"
@@ -92,6 +108,7 @@ const ContactUs = () => {
                 required
               ></TextAreaStyle>
               <PrimaryBtn
+                data-aos="zoom-in"
                 hoverBg="transparent"
                 hoverTransform="scale(1.1)"
                 bg="#16a092"
@@ -105,6 +122,7 @@ const ContactUs = () => {
           </Wrapper>
           <Wrapper>
             <img
+              data-aos="fade-up-left"
               style={{
                 maxWidth: "100%",
                 borderRadius: "10px",

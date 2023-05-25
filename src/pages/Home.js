@@ -66,6 +66,7 @@ const ServiceCardsData = [
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quisquam consequatur necessitatibus eaque.",
   },
 ];
+
 const Home = () => {
   return (
     <>
@@ -75,7 +76,7 @@ const Home = () => {
       <DeliveredSec />
       <HugeSec />
       <Wrapper bg="black">
-        <Wrapper className="container">
+        <Wrapper className="container" data-aos="fade-down">
           <Wrapper
             color="#16a092"
             ls="8px"

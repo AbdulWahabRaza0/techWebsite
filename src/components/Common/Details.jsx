@@ -11,7 +11,7 @@ const Details = (props) => {
     <Wrapper style={{ background: "#000" }}>
       <Wrapper pt="5rem" className="container">
         <Row>
-          <Col md={6}>
+          <Col md={6} data-aos="fade-right">
             <H1
               ls="3px"
               className={`text-white fw-bold ${isResponsive && "text-center"}`}
@@ -89,7 +89,7 @@ const Details = (props) => {
               </a>
             </PrimaryBtn>
           </Col>
-          <Col md={6}>
+          <Col md={6} data-aos="fade-left">
             {props.page === "home" && (
               <Wrapper
                 mt={isResponsive && "2rem"}

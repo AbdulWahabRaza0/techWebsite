@@ -38,8 +38,10 @@ const HeroSection = () => {
               className="services-hero fw-bold"
               style={{ color: "#16A092" }}
             >
-              Blockchain | Artificial intilligence | Data Science | Ecommerce |
-              DevOps
+              <div data-aos="fade-up-right">
+                Blockchain| Artificial intilligence | Data Science | Ecommerce |
+                DevOps
+              </div>
             </Wrapper>
           </Wrapper>
         </Wrapper>
