@@ -174,6 +174,7 @@ const CareerOpenings = () => {
                       >
                         <div className="d-md-flex align-items-center">
                           <Wrapper
+                            data-aos="zoom-in"
                             height={isResponsive ? "60px" : "58px"}
                             width={isResponsive ? "60px" : "88px"}
                             mr={!isResponsive && "50px"}
@@ -183,6 +184,7 @@ const CareerOpenings = () => {
                             <img
                               src={val.src}
                               height="100%"
+                              alt=""
                               width="100%"
                               style={{ objectFit: "contain" }}
                             />
@@ -190,6 +192,7 @@ const CareerOpenings = () => {
                           <div>
                             <div className="d-flex align-items-center">
                               <P
+                                data-aos="flip-left"
                                 size="15px"
                                 color="white"
                                 weight="700"
@@ -199,6 +202,7 @@ const CareerOpenings = () => {
                                 {val.title}
                               </P>
                               <P
+                                data-aos="flip-left"
                                 color="white"
                                 weight="700"
                                 lHeight="1.4"
@@ -214,6 +218,7 @@ const CareerOpenings = () => {
                                 {val.new}
                               </P>
                               <P
+                                data-aos="flip-left"
                                 color="black"
                                 weight="700"
                                 lHeight="1.4"
@@ -229,7 +234,7 @@ const CareerOpenings = () => {
                                 {val.feature}
                               </P>
                             </div>
-                            <CareerCardA href="#">
+                            <CareerCardA href="#" data-aos="fade-down-right">
                               <h2>{val.role}</h2>
                             </CareerCardA>
                           </div>
@@ -239,6 +244,7 @@ const CareerOpenings = () => {
                         pt={isResponsive && "20px"}
                         pl={isResponsive ? "0px" : "20px"}
                         bt={isResponsive && "1px solid #939c9b"}
+                        data-aos="fade-up-left"
                       >
                         <li>{val.city}</li>
                         <li>{val.time}</li>
