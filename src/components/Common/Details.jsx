@@ -46,13 +46,18 @@ const Details = (props) => {
                 color="white"
                 pt="20px"
                 lh="1.5rem"
+                style={{
+                  textJustify: "distribute-all-lines",
+                  hyphens: "auto",
+                  textAlign: "justify",
+                }}
                 className={isResponsive && "text-center"}
               >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
+                industry. Lorem Ipsum hashchhchchc been the industry's standard
+                dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It
+                has survived not only five centuries, but also the leap into
                 electronic typesetting, remaining essentially unchanged.
               </Wrapper>
             )}
