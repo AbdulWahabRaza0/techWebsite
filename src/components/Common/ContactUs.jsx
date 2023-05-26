@@ -3,6 +3,7 @@ import building from "../../assets/building.png";
 import { Wrapper, useMediaQuery } from "../Layouts";
 import { H1, P } from "../Typography";
 import styled from "styled-components";
+import { InputStyle, TextAreaInputStyle } from "../Inputs";
 import { PrimaryBtn } from "../Buttons";
 const ContactFormStyle = styled.div`
   height: 100%;
@@ -11,30 +12,7 @@ const ContactFormStyle = styled.div`
   display: grid;
   grid-gap: 6rem;
 `;
-const InputStyle = styled.input`
-  width: 100%;
-  padding: 17px;
-  border: none;
-  outline: none;
-  background: #191919;
-  color: #fff;
-  font-size: 1.1rem;
-  margin-bottom: 0.7rem;
-  border-radius: 10px;
-`;
-const TextAreaStyle = styled.textarea`
-  width: 100%;
-  padding: 17px;
-  border: none;
-  outline: none;
-  background: #191919;
-  color: #fff;
-  font-size: 1.1rem;
-  margin-bottom: 0.7rem;
-  border-radius: 10px;
-  resize: none;
-  height: 200px;
-`;
+
 const ContactUs = () => {
   const isResponsiveHighest = useMediaQuery({
     query: "(max-width: 1570px)",
@@ -98,7 +76,7 @@ const ContactUs = () => {
                 placeholder="write a subject"
                 required
               />
-              <TextAreaStyle
+              <TextAreaInputStyle
                 data-aos="fade-up"
                 name=""
                 id=""
@@ -106,7 +84,7 @@ const ContactUs = () => {
                 rows="10"
                 placeholder="Your message"
                 required
-              ></TextAreaStyle>
+              ></TextAreaInputStyle>
               <PrimaryBtn
                 data-aos="zoom-in"
                 hoverBg="transparent"
