@@ -17,7 +17,12 @@ const ModalComp = (props) => {
               {props.heading}
             </Wrapper>
           </Modal.Title>
-          <Wrapper style={{ cursor: "pointer" }}>
+          <Wrapper
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              props.setOpen(false);
+            }}
+          >
             <img
               width="25px"
               height="25px"
