@@ -21,6 +21,7 @@ const PrimaryBtn = styled.button`
   margin-top: 25px;
   transition: 0.4s ease-in-out;
   border: 2px solid #16a092;
+  font-size: 14px;
   width: ${(props) => (props.width ? props.width : "")};
   padding: ${(props) => (props.p ? props.p : "")};
   padding-left: ${(props) => (props.pl ? props.pl : "")};
@@ -33,7 +34,7 @@ const PrimaryBtn = styled.button`
       props.hoverTransition ? props.hoverTransition : ""};
     transform: ${(props) => (props.hoverTransform ? props.hoverTransform : "")};
     color: white;
-    font-weight: bold;
+    ${"" /* font-weight: bold; */}
   }
 `;
 export { HeaderBtn, PrimaryBtn };

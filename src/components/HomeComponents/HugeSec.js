@@ -10,6 +10,7 @@ const HugeSec = () => {
     <Wrapper bg="#000" className="pb-5">
       <Wrapper className="container">
         <H1
+          size="30px"
           data-aos="fade-down-right"
           className={`text-white pt-5 display-4 fw-bold ${
             isResponsive && "text-center"
@@ -23,7 +24,7 @@ const HugeSec = () => {
         >
           <Wrapper
             width={isResponsive ? "470px" : "700px"}
-            size={isResponsive && "16px"}
+            size={"12px"}
             className={`text-white pt-3 ${isResponsive && "text-center"}`}
           >
             We are all wired for mobile. We develop brands as well as

@@ -13,13 +13,14 @@ const Details = (props) => {
         <Row>
           <Col md={6} data-aos="fade-right">
             <H1
+              size="32px"
               ls="3px"
               className={`text-white fw-bold ${isResponsive && "text-center"}`}
             >
               {props.title}
             </H1>
             <Wrapper
-              size="22px"
+              size="24px"
               pt="15px"
               color="#16a092"
               className={isResponsive && "text-center"}
@@ -42,7 +43,7 @@ const Details = (props) => {
             </Wrapper>
             {props.page === "home" && (
               <Wrapper
-                size="16px"
+                size="12px"
                 color="white"
                 pt="20px"
                 lh="1.5rem"
@@ -66,6 +67,7 @@ const Details = (props) => {
                 <Wrapper
                   color="white"
                   lHeight="35px"
+                  size="16px"
                   className={`mt-4 ${isResponsive && "ms-4"}`}
                 >
                   <li>

@@ -46,6 +46,7 @@ const IndustriesCard = (props) => {
                         />
                         <H6
                           size={props.page === "career" && "21px"}
+                          weight="600"
                           className="mt-3"
                         >
                           {val.title}

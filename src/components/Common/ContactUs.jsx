@@ -41,23 +41,24 @@ const ContactUs = () => {
             <H1
               weight="bold"
               ls="2px"
-              size={"60px"}
+              size={"32px"}
               color="aliceblue"
               mb="20px"
             >
               Contact <span>us</span>
             </H1>
             <P
-              mb="3.8rem"
+              mb="2.2rem"
               ls="1px"
               lHeight="26px"
-              size={isResponsiveNormal ? "16px" : "15px"}
+              style={{ width: "90%" }}
+              size={isResponsiveNormal ? "12px" : "12px"}
               color="#16a092"
             >
               i am available for freelancer work connect with me via phone
               :032219903230 or email: info@tech.com
             </P>
-            <form className="position-relative mt-5" action="">
+            <form className="position-relative mt-2" action="">
               <InputStyle
                 data-aos="fade-up"
                 type=""

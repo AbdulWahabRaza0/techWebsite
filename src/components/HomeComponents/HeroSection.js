@@ -15,7 +15,7 @@ const HeroSection = () => {
               className="mb-0 mt-0"
               color="white"
               ls="3px"
-              size={isResponsive ? "15px" : "25px"}
+              size={isResponsive ? "15px" : "12px"}
               pl={isResponsive && "1rem"}
             >
               We Build
@@ -23,7 +23,7 @@ const HeroSection = () => {
             <Wrapper
               color="white"
               ls="3px"
-              size={isResponsive ? "30px" : "70px"}
+              size={isResponsive ? "30px" : "35px"}
               pl={isResponsive && "1rem"}
               transition={isResponsive && "0.6s ease-in-out"}
             >
@@ -38,10 +38,11 @@ const HeroSection = () => {
               style={{ color: "#16A092" }}
               fontFamily={"'Gilroy-Bold', sans-serif"}
               weight="600"
+              size="12px"
             >
               <div data-aos="fade-up-right">
-                Blockchain| Artificial intilligence | Data Science | Ecommerce |
-                DevOps
+                Blockchain | Artificial intilligence | Data Science | Ecommerce
+                | DevOps
               </div>
             </Wrapper>
           </Wrapper>

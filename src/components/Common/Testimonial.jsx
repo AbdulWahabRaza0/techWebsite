@@ -3,6 +3,7 @@ import karl from "../../assets/karl.png";
 import devid from "../../assets/devid.png";
 import styled from "styled-components";
 import { Wrapper, SpanWrapper } from "../Layouts";
+import { P, H2 } from "../Typography";
 const TestimonialSection = styled.section`
   display: grid;
   place-items: center;
@@ -37,8 +38,8 @@ const Testimonial = () => {
           <Wrapper
             position="relative"
             mt="50px"
-            mb="50px"
-            weight="900"
+            mb="20px"
+            weight="700"
             ls="2px"
             color="white"
             className="fs-1 text-center section-header"
@@ -60,7 +61,7 @@ const Testimonial = () => {
                         className={`carousel-item ${index === 0 && "active"}`}
                       >
                         <Wrapper color="white" p="15px" m="50px 15px">
-                          <div className="row">
+                          <Wrapper className="row align-items-center">
                             <div className="col-md-5">
                               <Wrapper
                                 mb="30px"
@@ -78,26 +79,28 @@ const Testimonial = () => {
                                     alt=""
                                   />
                                 </div>
-                                <div className="bio">
-                                  <h2>{val.title}</h2>
-                                </div>
+                                <Wrapper className="bio pt-3">
+                                  <H2 size="24px" weight="600">
+                                    {val.title}
+                                  </H2>
+                                </Wrapper>
                               </Wrapper>
                             </div>
                             <div className="col-md-6">
                               <Wrapper size="18px" className="content">
-                                <p className="text-justify">
+                                <P className="text-justify" size="12px">
                                   <SpanWrapper
                                     color="#16a092"
-                                    size="48px"
+                                    size="24px"
                                     mr="20px"
                                   >
                                     <i className="fa fa-quote-left"></i>
                                   </SpanWrapper>
                                   {val.desc}
-                                </p>
+                                </P>
                               </Wrapper>
                             </div>
-                          </div>
+                          </Wrapper>
                         </Wrapper>
                       </div>
                     </>
