@@ -61,6 +61,7 @@ const UL = styled.ul`
   }
 
   .navbar-a {
+    font-size: 14px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 0.75rem 1.25rem;
