@@ -22,7 +22,6 @@ const HeroSection = () => {
             </Wrapper>
             <Wrapper
               color="white"
-              weight="bold"
               ls="3px"
               size={isResponsive ? "30px" : "70px"}
               pl={isResponsive && "1rem"}
@@ -35,8 +34,10 @@ const HeroSection = () => {
             </Wrapper>
             <Wrapper
               ml={isResponsive && "1rem"}
-              className="services-hero fw-bold"
+              className="services-hero"
               style={{ color: "#16A092" }}
+              fontFamily={"'Gilroy-Bold', sans-serif"}
+              weight="600"
             >
               <div data-aos="fade-up-right">
                 Blockchain| Artificial intilligence | Data Science | Ecommerce |
