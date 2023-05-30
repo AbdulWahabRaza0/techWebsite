@@ -4,7 +4,7 @@ const HeaderBtn = styled.button`
   border: ${(props) =>
     props.scrollBtn ? "2px solid #16a092" : "2px solid white"};
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   background: transparent;
   padding: 9px 25px;
   text-transform: uppercase;
@@ -22,7 +22,7 @@ const PrimaryBtn = styled.button`
   margin-top: 25px;
   transition: 0.4s ease-in-out;
   border: 2px solid #16a092;
-  font-size: 14px;
+  font-size: 16px;
   width: ${(props) => (props.width ? props.width : "")};
   padding: ${(props) => (props.p ? props.p : "")};
   padding-left: ${(props) => (props.pl ? props.pl : "")};

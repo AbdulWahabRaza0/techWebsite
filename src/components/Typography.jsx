@@ -175,7 +175,7 @@ const P = styled.p`
     src: url("../fonts/Gilroy-Black.ttf") format("truetype");
   }
   font-family: ${(props) =>
-    props.fontFamily ? props.fontFamily : "'Gilroy-Black', sans-serif"};
+    props.fontFamily ? props.fontFamily : "Tinos, serif"};
   font-style: normal;
   text-transform: ${(props) => (props.tt ? props.tt : "")};
   font-weight: ${(props) => (props.weight ? props.weight : "")};

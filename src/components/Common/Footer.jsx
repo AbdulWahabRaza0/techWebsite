@@ -311,7 +311,7 @@ const Footer = () => {
                     <H3Extra className="position-relative">Subscribe</H3Extra>
                   </div>
                   <div className="footer-text mb-25">
-                    <p>
+                    <p className="text-white">
                       Don’t miss to subscribe to our new feeds, kindly fill the
                       form below.
                     </p>

@@ -40,8 +40,9 @@ const Testimonial = () => {
             mt="50px"
             mb="20px"
             weight="700"
-            ls="2px"
+            ls="3px"
             color="white"
+            size="32px"
             className="fs-1 text-center section-header"
           >
             Client Review
@@ -79,8 +80,8 @@ const Testimonial = () => {
                                     alt=""
                                   />
                                 </div>
-                                <Wrapper className="bio pt-3">
-                                  <H2 size="24px" weight="600">
+                                <Wrapper className="bio pt-4">
+                                  <H2 ls="1px" size="26px" weight="600">
                                     {val.title}
                                   </H2>
                                 </Wrapper>
@@ -88,10 +89,16 @@ const Testimonial = () => {
                             </div>
                             <div className="col-md-6">
                               <Wrapper size="18px" className="content">
-                                <P className="text-justify" size="12px">
+                                <P
+                                  className="text-justify"
+                                  fontFamily="Tinos, serif"
+                                  size="18px"
+                                  ls="1.5px"
+                                  lHeight="24px"
+                                >
                                   <SpanWrapper
                                     color="#16a092"
-                                    size="24px"
+                                    size="28px"
                                     mr="20px"
                                   >
                                     <i className="fa fa-quote-left"></i>

@@ -28,18 +28,25 @@ const ServicesSec = (props) => {
               <Wrapper
                 data-aos="fade-down"
                 width="100%"
-                className="d-flex flex-wrap justify-content-center pb-5"
+                className="d-flex flex-column flex-wrap justify-content-center pb-5"
               >
                 <H2
-                  size="30px"
+                  size="45px"
                   ls="3vpx"
-                  className="text-center text-white fw-bold fs-1 "
+                  weight="600"
+                  // color="#16a092"
+                  className="text-center text-white fs-1 "
                 >
                   {" "}
                   What we do ?
                 </H2>
                 <div className="what d-flex justify-content-center mt-2">
-                  <P size="12px" color="white" className=" w-75 text-center">
+                  <P
+                    size="16px"
+                    color="#bfcdd5"
+                    className=" w-75 text-center"
+                    lHeight="26px"
+                  >
                     We hire top 5% of the available talent, and provide you with
                     technically proficient and motivated team members for the
                     following technologies on staff augomentation model.
@@ -96,9 +103,10 @@ const ServicesSec = (props) => {
                           </H2>
                           <P
                             className="mt-4"
-                            color="white"
+                            // color="white"
+                            color="#bfcdd5"
                             weight="600"
-                            size="12px"
+                            size="16px"
                             lHeight="1.6"
                             ls="0.03em"
                           >
@@ -132,20 +140,21 @@ const ServicesSec = (props) => {
                             />
                           </div>
                           <H3
-                            size="24px"
+                            size="26px"
                             weight="600"
                             color="white"
                             margin="1rem 0"
-                            lHeight="25px"
+                            lHeight="34px"
                             className="text-white pt-3"
                           >
                             {val.title}
                           </H3>
                           <P
-                            className="text-white"
-                            color="white"
-                            size="12px"
-                            lHeight="18px"
+                            // className="text-white"
+                            color="#bfcdd5"
+                            size="15px"
+                            lHeight="24px"
+                            ls="1px"
                           >
                             {val.desc}
                           </P>

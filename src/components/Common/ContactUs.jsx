@@ -49,10 +49,10 @@ const ContactUs = () => {
             </H1>
             <P
               mb="2.2rem"
-              ls="1px"
-              lHeight="26px"
-              style={{ width: "90%" }}
-              size={isResponsiveNormal ? "12px" : "12px"}
+              ls="0.5px"
+              lHeight="24px"
+              // style={{ width: "90%" }}
+              size={isResponsiveNormal ? "12px" : "16px"}
               color="#16a092"
             >
               i am available for freelancer work connect with me via phone

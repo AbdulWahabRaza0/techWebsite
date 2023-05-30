@@ -30,7 +30,7 @@ const LetsTalk = () => {
         </Wrapper>
         <div className="d-flex justify-content-center mt-3 " data-aos="zoom-in">
           <PrimaryBtn
-            className="text-white py-2 px-3 rounded btn"
+            className="text-white py-2 px-4 rounded btn"
             style={{ fontWeight: "600" }}
           >
             Let's Talk

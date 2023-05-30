@@ -79,15 +79,15 @@ const Home = () => {
         <Wrapper className="container" data-aos="fade-down">
           <Wrapper
             color="#16a092"
-            ls="3px"
-            weight="bold"
+            ls="1px"
+            weight="600"
             pt="3rem"
             className="fs-5 "
             size="24px"
           >
             Industries we serves
           </Wrapper>
-          <H2 className="text-white" size="30px">
+          <H2 ls="2px" weight="100" className="text-white" size="32px">
             Managed IT Services customized for your industry
           </H2>
         </Wrapper>

@@ -11,6 +11,7 @@ const HeaderStyle = styled.div`
   * {
     overflow: hidden;
   }
+  font-family: Tinos, serif;
   overflow: hidden;
   width: 100%;
   height: 90px;
@@ -65,7 +66,7 @@ const UL = styled.ul`
   }
 
   .navbar-a {
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 0.75rem 1.25rem;

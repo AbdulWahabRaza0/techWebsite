@@ -13,7 +13,7 @@ const InputStyle = styled.input`
   outline: none;
   background: #191919;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0.7rem;
   border-radius: 15px;
 `;
@@ -30,7 +30,7 @@ const TextAreaInputStyle = styled.textarea`
   outline: none;
   background: #191919;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 16px;
   margin-bottom: 0.7rem;
   border-radius: 10px;
   resize: none;
