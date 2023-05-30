@@ -8,7 +8,7 @@ const Details = (props) => {
     query: "(max-width: 768px)",
   });
   return (
-    <Wrapper style={{ background: "#000" }}>
+    <Wrapper style={{ background: "#000" }} width="100%">
       <Wrapper pt="5rem" className="container">
         <Row>
           <Col md={6} data-aos="fade-right">

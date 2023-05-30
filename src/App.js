@@ -16,13 +16,13 @@ const App = () => {
   }, []);
   return (
     <>
-      <Wrapper>
+      <Wrapper width="100%">
         <Wrapper
           style={{
             position: "fixed",
             bottom: "5%",
             right: "5%",
-            zIndex: 1,
+            zIndex: 10,
           }}
         >
           <a

@@ -8,6 +8,10 @@ import { HeaderBtn } from "../Buttons";
 import styled from "styled-components";
 
 const HeaderStyle = styled.div`
+  * {
+    overflow: hidden;
+  }
+  overflow: hidden;
   width: 100%;
   height: 90px;
   padding: 0 1.5rem;
@@ -135,6 +139,7 @@ function Header() {
 
   return (
     <HeaderStyle
+      // style={{ overflow: breakPoint && "hidden !important" }}
       p={breakPoint ? "0 3rem" : "0 1.5rem"}
       bg={color && "white"}
       transition={color ? "0.5s ease" : "0.3s ease transform;"}
@@ -159,7 +164,7 @@ function Header() {
                 : "translate(0)"
             }
             width={breakPoint ? "auto" : "100%"}
-            height={breakPoint ? "100%" : "100vh"}
+            height={breakPoint ? "auto" : "100vh"}
             position={breakPoint ? "static" : "fixed"}
             color={menuOpen && size.width < 768 && "black"}
             bg={breakPoint ? "transparent" : "rgba(105, 102, 102, 0.9)"}
