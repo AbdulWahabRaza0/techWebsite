@@ -39,10 +39,10 @@ const ModalComp = (props) => {
           <PrimaryBtn
             data-aos="zoom-in"
             hoverBg="transparent"
-            hoverTransform="scale(1.1)"
+            // hoverTransform="scale(1.1)"
             bg="#16a092"
             className="btn btn-simision text-white ps-4 pt-1 pb-1 pe-4 fw-bold"
-            style={{ border: "1px solid #16a092", fontSize: "23px" }}
+            style={{ border: "1px solid #16a092", fontSize: "21px" }}
           >
             Submit
           </PrimaryBtn>

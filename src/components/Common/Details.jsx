@@ -13,25 +13,26 @@ const Details = (props) => {
         <Row className="align-items-center">
           <Col md={6} data-aos="fade-right">
             <H1
-              size="26px"
-              weight="100"
-              ls="5px"
+              size="45px"
+              // weight="100"
+              // ls="5px"
+
               className={`text-white ${isResponsive && "text-center"}`}
             >
               {props.title}
             </H1>
             <Wrapper
               size="32px"
-              pt="15px"
+              // pt="5px"
               color="#16a092"
-              weight="100"
+              weight="600"
               className={isResponsive && "text-center"}
             >
               {props.page === "home" && (
                 <>
                   {" "}
                   We are a Creative Agency- By{" "}
-                  <SpanWrapper weight="900">tech</SpanWrapper>
+                  <SpanWrapper weight="600">tech</SpanWrapper>
                 </>
               )}
               {props.page === "services" && (
@@ -45,11 +46,13 @@ const Details = (props) => {
             </Wrapper>
             {props.page === "home" && (
               <Wrapper
-                size="16px"
+                size="18px"
                 color="#bfcdd5"
-                pt="20px"
+                pt="10px"
                 lh="1.7rem"
-                fontFamily="Tinos, serif"
+                width="90%"
+                weight="300"
+                // fontFamily="Tinos, serif"
                 style={{
                   textJustify: "distribute-all-lines",
                   hyphens: "auto",
@@ -90,12 +93,14 @@ const Details = (props) => {
             )}
 
             <PrimaryBtn
+              pt="7px"
+              pb="7px"
               className={`btn ${
                 isResponsive &&
                 "d-flex flex-row w-100 justify-content-center mb-5"
               }`}
             >
-              <a href="#About" className="text-white text-decoration-none px-3">
+              <a href="#About" className="text-white text-decoration-none px-4">
                 {props.btnName}
               </a>
             </PrimaryBtn>
