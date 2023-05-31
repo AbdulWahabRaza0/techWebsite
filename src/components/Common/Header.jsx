@@ -54,7 +54,7 @@ const HeaderContentNavStyle = styled.div`
 `;
 const UL = styled.ul`
   list-style: none;
-  padding: 0px;
+
   display: flex;
   flex-direction: column;
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
@@ -137,10 +137,8 @@ function Header() {
   const menuToggleHandler = () => {
     setMenuOpen((menuOpen) => !menuOpen);
   };
-
   return (
     <HeaderStyle
-      // style={{ overflow: breakPoint && "hidden !important" }}
       p={breakPoint ? "0 3rem" : "0 1.5rem"}
       bg={color && "white"}
       transition={color ? "0.5s ease" : "0.3s ease transform;"}

@@ -159,9 +159,15 @@ const CareerOpenings = () => {
     role: "",
     message: "",
   });
+  const handleClose = () => setOpen(false);
   return (
     <>
-      <ModalComp heading={"Apply Now"} show={open} setOpen={setOpen}>
+      <ModalComp
+        heading={"Apply Now"}
+        open={open}
+        setOpen={setOpen}
+        handleClose={handleClose}
+      >
         <Wrapper m="5px">
           <Spacer height="30px" />
           {InputData.map((val, index) => {
@@ -194,10 +200,16 @@ const CareerOpenings = () => {
             data-aos="fade-up"
             name="message"
             value={valuesInput.message}
+            onChange={(e) => {
+              setValuesInput((prevState) => ({
+                ...prevState,
+                message: e.target.value,
+              }));
+            }}
             id=""
             cols="30"
             rows="10"
-            placeholder="Your message"
+            placeholder="Enter your message here..."
             required
           ></TextAreaInputStyle>
         </Wrapper>
@@ -321,7 +333,7 @@ const CareerOpenings = () => {
                                 name: "Admad",
                                 email: "ahmad@gmail.com",
                                 role: val.role,
-                                message: "This is dummy message",
+                                message: "",
                               });
                             }}
                           >
