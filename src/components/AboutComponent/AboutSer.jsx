@@ -3,6 +3,7 @@ import user from "../../assets/user.png";
 import circle from "../../assets/circle.png";
 import media from "../../assets/media.png";
 import { Wrapper, Card, Row, Col } from "../Layouts";
+import { H2, P } from "../Typography";
 const CardData = [
   {
     src: media,
@@ -38,6 +39,7 @@ const AboutSer = () => {
                 tt="capitalize"
                 weight="bold"
                 ls="2px"
+                size="45px"
                 className="fs-1 text-center about-heading"
               >
                 technologynsolutions to help businesses <br /> and socities
@@ -45,7 +47,7 @@ const AboutSer = () => {
               </Wrapper>
               <Wrapper
                 color="#b2abab"
-                size="15px"
+                size="18px"
                 className="text-center p-about pt-4"
               >
                 tech is a privately owned IT Support and IT Services business.
@@ -70,12 +72,27 @@ const AboutSer = () => {
                     data-aos="flip-left"
                   >
                     <Card>
-                      <h2 className="text-white">What we do ?</h2>
-                      <div className="icon-wrapper">
-                        <img src={val.src} alt="" style={{ width: "63px" }} />
+                      <H2 size="32px" weight="600" className="text-white">
+                        What we do ?
+                      </H2>
+                      <div className="icon-wrapper mt-4 mb-2">
+                        <img src={val.src} alt="" style={{ width: "75px" }} />
                       </div>
-                      <p className="pt-4 text-white">{val.desc}</p>
-                      <div className="fs-4 text-white">View Our Services</div>
+                      <P
+                        style={{
+                          textJustify: "distribute-all-lines",
+                          hyphens: "auto",
+                          textAlign: "justify",
+                        }}
+                        size="18px"
+                        lHeight="26px"
+                        className="pt-4 text-white text-center"
+                      >
+                        {val.desc}
+                      </P>
+                      <Wrapper size="32px" className="fs-4 text-white">
+                        View Our Services
+                      </Wrapper>
                     </Card>
                   </Col>
                 </>

@@ -217,13 +217,14 @@ const CareerOpenings = () => {
       <Wrapper bg="#000">
         <div className="container">
           <Wrapper
+            size="48px"
             pt="5rem"
             color="white"
             className="text-center display-4 fw-bold"
           >
             Current Openings
           </Wrapper>
-          <Wrapper className="text-white text-center pt-3">
+          <Wrapper size="18px" className="text-white text-center pt-3">
             feel fulfilled.have fun.help us to shape the future
           </Wrapper>
 
@@ -347,10 +348,13 @@ const CareerOpenings = () => {
               </ul>
             </div>
           </Wrapper>
-          <div className="weneed text-white text-center fs-4 py-4">
+          <Wrapper
+            size="18px"
+            className="weneed text-white text-center fs-4 py-4"
+          >
             we are always on the lookout for talented folk to join our team
             .follow us on linkedin!
-          </div>
+          </Wrapper>
         </div>
       </Wrapper>
     </>

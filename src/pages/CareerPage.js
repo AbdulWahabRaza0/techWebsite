@@ -51,10 +51,13 @@ const CareerPage = () => {
       />
       <Wrapper bg="#000">
         <div className="container py-5" data-aos="fade-up">
-          <div className="text-center text-white fs-1 text-capitalize fw-bold pt-5">
+          <Wrapper
+            size="48px"
+            className="text-center text-white fs-1 text-capitalize fw-bold pt-5"
+          >
             Lets explore our capabilities together
-          </div>
-          <Wrapper color="#16a092" className="text-center pt-3">
+          </Wrapper>
+          <Wrapper size="18px" color="#16a092" className="text-center pt-3">
             The href attribute requires a valid value to be accessible. Provide
             a valid.
           </Wrapper>

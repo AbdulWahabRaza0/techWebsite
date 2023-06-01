@@ -20,6 +20,7 @@ const Hero = (props) => {
         <Wrapper height="90vh" className="container d-flex align-items-center">
           <div className={`wrapper ${props.extra !== "" ? "pt-5" : "pt-1"}`}>
             <Wrapper
+              fontFamily="Arial, sans-serif"
               data-aos="fade-right"
               color="white"
               size="25px"
@@ -31,7 +32,7 @@ const Hero = (props) => {
             <Wrapper
               data-aos="fade-up-right"
               color="white"
-              weight="bold"
+              weight="900"
               ls="3px"
               size="70px"
               ml={isResponsive && "14px"}
@@ -44,7 +45,7 @@ const Hero = (props) => {
               width={isResponsive ? "310px" : "650px"}
               lHeight="24px"
               ml={isResponsive && "14px"}
-              size={isResponsive && "14px"}
+              size={isResponsive ? "14px" : "18px"}
               className={`about-hero fw-bold pb-1 ${
                 props.page === "about" && "pt-2"
               }`}
@@ -57,7 +58,7 @@ const Hero = (props) => {
                 <PrimaryBtn
                   data-aos="zoom-in"
                   bg={isResponsive ? "#16a092" : "transparent"}
-                  className="fs-5 rounded text-white mt-4"
+                  className="fs-5 rounded text-white mt-4 px-3 py-1"
                 >
                   Get in touch
                 </PrimaryBtn>

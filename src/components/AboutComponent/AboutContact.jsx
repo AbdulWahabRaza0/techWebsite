@@ -10,18 +10,27 @@ const AboutContact = () => {
         <div className="container pt-5">
           <div className="d-flex justify-content-center">
             <div className="mm">
-              <H4 color="#16a092" className="text-center" data-aos="fade-up">
+              <H4
+                size="32px"
+                color="#16a092"
+                className="text-center"
+                data-aos="fade-up"
+              >
                 Let's Started
               </H4>
-              <div
+              <Wrapper
+                weight="600"
+                size="45px"
                 className="fs-1 about-heading text-white text-center"
                 data-aos="fade-up"
               >
                 Are you ready for a better,more <br /> productive business ?
-              </div>
+              </Wrapper>
               <Wrapper
+                size="18px"
                 color="gray"
-                className="p-about pt-4 text-center"
+                className="p-about pt-3 text-center"
+                weight="600"
                 data-aos="fade-up"
               >
                 Stop worrying about technology problems. Focus on your
@@ -32,7 +41,7 @@ const AboutContact = () => {
                 data-aos="zoom-in"
               >
                 <Link>
-                  <PrimaryBtn className="rounded btn text-white fs-5 fw-bold">
+                  <PrimaryBtn className="rounded btn text-white px-4 py-1 fs-5 fw-bold">
                     Contact Us{" "}
                   </PrimaryBtn>
                 </Link>

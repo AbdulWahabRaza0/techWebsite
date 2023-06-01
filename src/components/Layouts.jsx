@@ -2,10 +2,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 const Wrapper = styled.div`
-  @font-face {
-    font-family: "Gilroy-Black.eot";
-    src: url("../fonts/Gilroy-Black.ttf") format("truetype");
-  }
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-Light', sans-serif"};
   font-style: normal;
@@ -37,10 +33,6 @@ const Wrapper = styled.div`
   min-width: ${(props) => (props.minW ? props.minW : "")};
 `;
 const SpanWrapper = styled.span`
-  @font-face {
-    font-family: "Gilroy-Black.eot";
-    src: url("../fonts/Gilroy-Black.ttf") format("truetype");
-  }
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-Light', sans-serif"};
   font-style: normal;

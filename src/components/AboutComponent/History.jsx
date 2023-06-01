@@ -15,20 +15,38 @@ const History = () => {
         <Row className={isResponsive ? "d-flex flex-row" : ""}>
           <Col md={6} data-aos="fade-right">
             <Wrapper p="1rem" m="0 2px 2px 0" className="flex-grow-1">
-              <div className="fs-1 text-white fw-bold">Our History</div>
-              <div className="fs-2  text-white pt-3">2010-2017</div>
-              <div className="text-white pt-3">
+              <Wrapper
+                weight="600"
+                size="35px"
+                className="fs-1 text-white fw-bold"
+              >
+                Our History
+              </Wrapper>
+              <Wrapper
+                size="32px"
+                weight="600"
+                className="fs-2 text-white pt-3"
+              >
+                2010-2017
+              </Wrapper>
+              <Wrapper size="18px" lHeight="26px" className="text-white pt-3">
                 tech successfully partners with multiple organization, a growing
                 provider of local Pakistan IT Support and IT Services to both
                 local and overseas businesses.
-              </div>
-              <div className="fs-2  text-white pt-3">2018-2023</div>
-              <div className="text-white pt-3">
+              </Wrapper>
+              <Wrapper
+                size="32px"
+                weight="600"
+                className="fs-2  text-white pt-3"
+              >
+                2018-2023
+              </Wrapper>
+              <Wrapper size="18px" lHeight="26px" className="text-white pt-3">
                 tech successfully partners with multiple organization, a growing
                 provider of local Pakistan IT Support and IT Services to both
                 local and overseas businesses. tech successfully partners with
                 multiple organization, a growing provider of local Pakistan IT
-              </div>
+              </Wrapper>
             </Wrapper>
           </Col>
           <Col md={6} data-aos="fade-left">

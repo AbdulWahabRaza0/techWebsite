@@ -106,7 +106,6 @@ const ServicesSec = (props) => {
                               textAlign: "justify",
                             }}
                             className="mt-4"
-                            // color="white"
                             color="#bfcdd5"
                             weight="600"
                             size="16px"

@@ -1,5 +1,4 @@
 import { Wrapper } from "./Layouts";
-import close from "../assets/close.svg";
 import { PrimaryBtn } from "./Buttons";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -35,20 +34,6 @@ const ModalComp = (props) => {
                 {props.heading}
               </Wrapper>
             </Wrapper>
-            {/* <Wrapper
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                props.setOpen(false);
-              }}
-            >
-              <img
-                width="25px"
-                height="25px"
-                src={close}
-                alt="close"
-                style={{ filter: "brightness(0) invert(1)" }}
-              />
-            </Wrapper> */}
           </Wrapper>
 
           <Wrapper>{props.children}</Wrapper>

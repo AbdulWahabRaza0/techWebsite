@@ -12,18 +12,30 @@ const Details = (props) => {
       <Wrapper pt="5rem" className="container">
         <Row className="align-items-center">
           <Col md={6} data-aos="fade-right">
-            <H1
-              size="45px"
-              // weight="100"
-              // ls="5px"
-
-              className={`text-white ${isResponsive && "text-center"}`}
-            >
-              {props.title}
-            </H1>
+            {props.page === "home" && (
+              <>
+                {" "}
+                <H1
+                  size="45px"
+                  className={`text-white ${isResponsive && "text-center"}`}
+                >
+                  {props.title}
+                </H1>
+              </>
+            )}
+            {props.page === "services" && (
+              <>
+                {" "}
+                <H1
+                  size="48px"
+                  className={`text-white ${isResponsive && "text-center"}`}
+                >
+                  {props.title}
+                </H1>
+              </>
+            )}
             <Wrapper
               size="32px"
-              // pt="5px"
               color="#16a092"
               weight="600"
               className={isResponsive && "text-center"}
@@ -37,10 +49,10 @@ const Details = (props) => {
               )}
               {props.page === "services" && (
                 <>
-                  <span className="fw-bold">
+                  <SpanWrapper size="21px" className="fw-bold">
                     Web applications, portable applications, mixed undertakings,
                     and then some.350 + projects | Since 2017
-                  </span>
+                  </SpanWrapper>
                 </>
               )}
             </Wrapper>
@@ -74,7 +86,7 @@ const Details = (props) => {
                   color="#bfcdd5"
                   fontFamily="Tinos, serif"
                   lHeight="35px"
-                  size="16px"
+                  size="18px"
                   className={`mt-4 ${isResponsive && "ms-4"}`}
                 >
                   <li>
@@ -95,12 +107,13 @@ const Details = (props) => {
             <PrimaryBtn
               pt="7px"
               pb="7px"
+              width="150px"
               className={`btn ${
                 isResponsive &&
                 "d-flex flex-row w-100 justify-content-center mb-5"
               }`}
             >
-              <a href="#About" className="text-white text-decoration-none px-4">
+              <a href="#About" className="text-white text-decoration-none">
                 {props.btnName}
               </a>
             </PrimaryBtn>
@@ -120,12 +133,22 @@ const Details = (props) => {
                 className="w-100 p-5 h-100 d-flex justify-content-center align-items-center"
               >
                 <div>
-                  <h1 className="text-center display-5 fw-bold text-white">
+                  <H1
+                    size="48px"
+                    className="text-center display-5 fw-bold text-white "
+                  >
                     GROW YOUR BUSSINESS
-                  </h1>
+                  </H1>
                   <Wrapper
-                    fontFamily="Tinos, serif"
-                    className="text-center text-white"
+                    size="18px"
+                    weight="500"
+                    lHeight="31px"
+                    className="text-center text-white mb-3 mt-3"
+                    style={{
+                      textJustify: "distribute-all-lines",
+                      hyphens: "auto",
+                      textAlign: "justify",
+                    }}
                   >
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's

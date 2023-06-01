@@ -1,6 +1,7 @@
 import React from "react";
 import { Wrapper, useMediaQuery } from "../Layouts";
 import styled from "styled-components";
+import { H1 } from "../Typography";
 const TestimonialStyle = styled.section`
   background: transparent;
   padding-top: 5rem;
@@ -188,6 +189,7 @@ const TestimonialStyle = styled.section`
 const PointsLI = styled.li`
   color: rgba(240, 248, 255, 0.604);
   font-size: 20px;
+  font-weight: 400;
   line-height: 3rem;
   text-transform: capitalize;
 `;
@@ -245,10 +247,14 @@ const AboutTes = () => {
                   className="carousel slide"
                   data-ride="carousel"
                 >
-                  <h1 className="text-white text-capitalize fs-1 ">
+                  <H1
+                    size="45px"
+                    weight="900"
+                    className="text-white text-capitalize fs-1 "
+                  >
                     Whats Going At tech ?{" "}
-                  </h1>
-                  <div className="points">
+                  </H1>
+                  <Wrapper className="points">
                     <ul style={{ paddingTop: "3rem" }}>
                       {PointsLIData.map((val, index) => {
                         return (
@@ -258,7 +264,7 @@ const AboutTes = () => {
                         );
                       })}
                     </ul>
-                  </div>
+                  </Wrapper>
                 </div>
               </div>
             </div>
