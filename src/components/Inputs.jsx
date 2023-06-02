@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const InputStyle = styled.input`
-  @font-face {
+@font-face {
     font-family: "Gilroy-Black.eot";
     src: url("../fonts/Gilroy-Black.ttf") format("truetype");
   }

@@ -18,7 +18,6 @@ const ServicesSec = (props) => {
   const isResponsiveMore = useMediaQuery({
     query: "(min-width: 992px)",
   });
-
   return (
     <>
       <SectionStyle p={isResponsive && "0 2rem"}>
@@ -34,8 +33,10 @@ const ServicesSec = (props) => {
                   size="45px"
                   ls="3vpx"
                   weight="600"
+                  // color="#16a092"
                   className="text-center text-white fs-1 "
                 >
+                  {" "}
                   What we do ?
                 </H2>
                 <div className="what d-flex justify-content-center mt-2">
@@ -45,9 +46,9 @@ const ServicesSec = (props) => {
                     className=" w-75 text-center"
                     lHeight="26px"
                   >
-                    We hire top 5% of the available talent, and provide you with
-                    technically proficient and motivated team members for the
-                    following technologies on staff augomentation model.
+                    We collaborate closely with clients, combining industry best
+                    practices and advanced technologies to deliver exceptional,
+                    scalable, and cost-effective results.
                   </P>
                 </div>
               </Wrapper>
@@ -105,10 +106,10 @@ const ServicesSec = (props) => {
                               hyphens: "auto",
                               textAlign: "justify",
                             }}
-                            className="mt-4"
+                            className="mt-4 text-center"
                             color="#bfcdd5"
                             weight="600"
-                            size="16px"
+                            size="14px"
                             lHeight="1.6"
                             ls="0.03em"
                           >

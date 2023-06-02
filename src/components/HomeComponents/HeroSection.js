@@ -1,10 +1,12 @@
 import React from "react";
 import { useMediaQuery, Wrapper } from "../Layouts";
+import { Typewriter } from "react-simple-typewriter";
 import ParticlesBg from "./ParticlesBg/ParticlesBg";
 const HeroSection = () => {
   const isResponsive = useMediaQuery({
     query: "(max-width: 517px)",
   });
+
   return (
     <>
       <ParticlesBg />
@@ -28,21 +30,35 @@ const HeroSection = () => {
               pl={isResponsive && "1rem"}
               transition={isResponsive && "0.6s ease-in-out"}
             >
-              Agile Software
-              <br />
-              Development Teams
+              {/* Style will be inherited from the parent element */}
+              <Typewriter
+                words={[
+                  "Agile teams",
+                  "Blockchain Applications",
+                  "E-Commerce Applications",
+                  "Custom FullStack Software Solutions",
+                ]}
+                loop={5}
+                cursor
+                cursorStyle="|"
+                typeSpeed={90}
+                deleteSpeed={1}
+                delaySpeed={1500}
+              />
             </Wrapper>
             <Wrapper
               ml={isResponsive && "1rem"}
               className="services-hero"
-              color="#16A092"
+              //  fontFamily={"'Gilroy-Bold', sans-serif"}
               weight="600"
+              color="#16A092"
               size="18px"
               lHeight="27px"
             >
               <div data-aos="fade-up-right">
-                Blockchain | Artificial intilligence | Data Science | Ecommerce
-                | DevOps
+                Blockchain&nbsp; &nbsp;|&nbsp;&nbsp;Artificial
+                intilligence&nbsp;&nbsp;|&nbsp;&nbsp;Data
+                Science&nbsp;&nbsp;|&nbsp;&nbsp;Ecommerce&nbsp;&nbsp;|&nbsp;&nbsp;DevOps
               </div>
             </Wrapper>
           </Wrapper>

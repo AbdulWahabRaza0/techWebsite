@@ -33,9 +33,9 @@ const Wrapper = styled.div`
   min-width: ${(props) => (props.minW ? props.minW : "")};
 `;
 const SpanWrapper = styled.span`
+  font-style: normal;
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-Light', sans-serif"};
-  font-style: normal;
   font-family: ${(props) => (props.fontFamily ? props.fontFamily : "")};
   position: ${(props) => (props.position ? props.position : "")};
   background: ${(props) => (props.bg ? props.bg : "")};

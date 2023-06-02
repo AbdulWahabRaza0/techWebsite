@@ -1,6 +1,7 @@
 import React from "react";
 import { Wrapper } from "../Layouts";
 import { PrimaryBtn } from "../Buttons";
+
 const LetsTalk = () => {
   return (
     <Wrapper bg="#000">
@@ -15,7 +16,7 @@ const LetsTalk = () => {
           Want to higher a dedicated developer ?
         </Wrapper>
         <div className="d-flex justify-content-center " data-aos="zoom-in">
-          <PrimaryBtn
+          <PrimaryBtn 
             className="text-white py-2 px-4 rounded btn"
             style={{ fontWeight: "600" }}
           >

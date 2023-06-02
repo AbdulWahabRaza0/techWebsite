@@ -3,29 +3,38 @@ import user from "../../assets/user.png";
 import circle from "../../assets/circle.png";
 import media from "../../assets/media.png";
 import { Wrapper, Card, Row, Col } from "../Layouts";
-import { H2, P } from "../Typography";
 const CardData = [
   {
+    heading: `Passion for Superiority`,
+    button: `View Services`,
     src: media,
-    desc: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quisquam consequatur necessitatibus eaque.Lorem ipsum dolor,
-                  sit amet consectetur adipisicing elit. Quisquam consequatur
-                  necessitatibus eaque`,
+    desc: `We are driven by a passion for excellence. We set high standards
+    for ourselves and continually strive to surpass them. Our commitment to 
+    excellence is reflected in the exceptional quality of our software solutions,
+     the professionalism of our team, and the satisfaction of our clients.`,
   },
   {
+    heading: `Client-Centric Approach`,
+    button: `View Services`,
     src: user,
-    desc: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quisquam consequatur necessitatibus eaque.Lorem ipsum dolor,
-                  sit amet consectetur adipisicing elit. Quisquam consequatur
-                  necessitatibus eaque`,
+    desc: ` Our clients are at the center of everything we do. We understand that 
+    every business is unique, and we take the time to listen and understand our 
+    clients' specific needs, goals, and challenges. By collaborating closely with 
+    our clients, we develop tailored software solutions that align with their vision
+     and objectives.`,
   },
+ 
   {
+    heading: `Quality Assurance    `,
+    button: `View Services`,
     src: circle,
-    desc: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quisquam consequatur necessitatibus eaque.Lorem ipsum dolor,
-                  sit amet consectetur adipisicing elit. Quisquam consequatur
-                  necessitatibus eaque`,
+    desc: `Quality is ingrained in our DNA. We follow rigorous testing and quality 
+    assurance processes to ensure the software we deliver is of the highest standard.
+     Our meticulous approach to quality control guarantees robust, secure, and scalable
+      solutions that can withstand the demands of today's dynamic business environment.`,
   },
+
+  
 ];
 const AboutSer = () => {
   return (
@@ -33,27 +42,25 @@ const AboutSer = () => {
       <Wrapper bg="#000">
         <div className="container pt-5">
           <div className="d-flex justify-content-center">
-            <div className="mm" data-aos="fade-up">
+            <div className="mm" data-aos="fade-down">
               <Wrapper
                 color="#fff"
                 tt="capitalize"
                 weight="bold"
                 ls="2px"
-                size="45px"
                 className="fs-1 text-center about-heading"
               >
-                technologynsolutions to help businesses <br /> and socities
-                flourish
+                innovation meets excellence in <br /> software solutions
               </Wrapper>
               <Wrapper
-                color="#b2abab"
-                size="18px"
+                color="#ffffff"
+                size="20px"
                 className="text-center p-about pt-4"
               >
-                tech is a privately owned IT Support and IT Services business.
-                Today we’re proud to boast a strong <br /> team of IT engineers
-                who thrive on rolling up their sleeves and solving your IT
-                problems and meeting your <br /> business needs.
+                We are a leading software development company dedicated to
+                delivering cutting-edge technology and empowering businesses
+                with scalable and
+                <br /> reliable software solutions.
               </Wrapper>
             </div>
           </div>
@@ -72,27 +79,16 @@ const AboutSer = () => {
                     data-aos="flip-left"
                   >
                     <Card>
-                      <H2 size="32px" weight="600" className="text-white">
-                        What we do ?
-                      </H2>
-                      <div className="icon-wrapper mt-4 mb-2">
-                        <img src={val.src} alt="" style={{ width: "75px" }} />
+                      <h2 className="text-white">{val.heading}</h2>
+                      <div className="icon-wrapper">
+                        <img src={val.src} alt="" style={{ width: "63px" }} />
                       </div>
-                      <P
-                        style={{
-                          textJustify: "distribute-all-lines",
-                          hyphens: "auto",
-                          textAlign: "justify",
-                        }}
-                        size="18px"
-                        lHeight="26px"
-                        className="pt-4 text-white text-center"
-                      >
-                        {val.desc}
-                      </P>
-                      <Wrapper size="32px" className="fs-4 text-white">
-                        View Our Services
-                      </Wrapper>
+                      <p className="pt-4 text-white"  style={{
+                  textJustify: "distribute-all-lines",
+                  hyphens: "auto",
+                  textAlign: "justify",
+                }}>{val.desc}</p>
+                      <div className="fs-4 text-white">{val.button}</div>
                     </Card>
                   </Col>
                 </>

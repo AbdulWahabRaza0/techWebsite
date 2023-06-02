@@ -3,8 +3,12 @@ import building from "../../assets/building.png";
 import { Wrapper, useMediaQuery } from "../Layouts";
 import { H1, P } from "../Typography";
 import styled from "styled-components";
-import { InputStyle, TextAreaInputStyle } from "../Inputs";
 import { PrimaryBtn } from "../Buttons";
+const ContactSection = styled.section`
+  display: grid;
+  place-items: center;
+  background: linear-gradient(177deg, rgb(0, 0, 0) 40%, rgb(10, 83, 83) 100%);
+`;
 const ContactFormStyle = styled.div`
   height: 100%;
   width: 100%;
@@ -13,6 +17,30 @@ const ContactFormStyle = styled.div`
   grid-gap: 6rem;
 `;
 
+const InputStyle = styled.input`
+  width: 100%;
+  padding: 17px;
+  border: none;
+  outline: none;
+  background: #191919;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 10px;
+`;
+const TextAreaStyle = styled.textarea`
+  width: 100%;
+  padding: 17px;
+  border: none;
+  outline: none;
+  background: #191919;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 10px;
+  resize: none;
+  height: 200px;
+`;
 const ContactUs = () => {
   const isResponsiveHighest = useMediaQuery({
     query: "(max-width: 1570px)",
@@ -25,7 +53,8 @@ const ContactUs = () => {
   });
   return (
     <>
-      <Wrapper bg="#000">
+      <ContactSection bg="#000">
+
         <ContactFormStyle
           p={isResponsiveHighest ? "0px 3%" : "0px 15%"}
           transition={
@@ -59,33 +88,31 @@ const ContactUs = () => {
               :032219903230 or email: info@tech.com
             </P>
             <form className="position-relative mt-2" action="">
-              <InputStyle
-                data-aos="fade-up"
+            <InputStyle
+                
                 type=""
-                placeholder="your name"
+                placeholder="Your Name"
                 required
               />
               <InputStyle
-                data-aos="fade-up"
+                
                 type=""
-                placeholder="email"
+                placeholder="Your Email"
                 required
               />
               <InputStyle
-                data-aos="fade-up"
                 type=""
                 placeholder="write a subject"
                 required
               />
-              <TextAreaInputStyle
-                data-aos="fade-up"
+              <TextAreaStyle
                 name=""
                 id=""
                 cols="30"
                 rows="10"
                 placeholder="Your message"
                 required
-              ></TextAreaInputStyle>
+              ></TextAreaStyle>
               <PrimaryBtn
                 data-aos="zoom-in"
                 hoverBg="transparent"
@@ -101,7 +128,7 @@ const ContactUs = () => {
           </Wrapper>
           <Wrapper>
             <img
-              data-aos="fade-up-left"
+            data-aos="fade-up-left"
               style={{
                 maxWidth: "100%",
                 borderRadius: "10px",
@@ -115,7 +142,7 @@ const ContactUs = () => {
             />
           </Wrapper>
         </ContactFormStyle>
-      </Wrapper>
+      </ContactSection>
     </>
   );
 };

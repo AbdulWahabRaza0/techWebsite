@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CareerOpenings from "../components/careerComponents/CareerOpenings";
 import Hero from "../components/Common/Hero";
 import { Wrapper } from "../components/Layouts";
@@ -8,58 +8,60 @@ import riding from "../assets/riding.png";
 import lunch from "../assets/lunch.png";
 import emoji from "../assets/emoji.png";
 import flexibility from "../assets/flexibility.png";
+import { useNavigate } from "react-router-dom";
 const IndustriesCareerData = [
   {
     src: health,
     title: "Health care",
-    desc: "No-premium health, dental, and vision benefits, 401K, FSA",
+    desc: "Comprehensive healthcare coverage, prioritizing your well-being.",
   },
 
   {
     src: flexibility,
     title: "Flexibility",
-    desc: "No-premium health, dental, and vision benefits, 401K, FSA",
+    desc: "Embrace work-life balance with flexible schedules and remote options",
   },
   {
     src: lunch,
     title: "Lunch",
-    desc: "No-premium health, dental, and vision benefits, 401K, FSA",
+    desc: "Complimentary catered lunches for a nourishing workday",
   },
 
   {
     src: emoji,
     title: "Fun",
-    desc: "No-premium health, dental, and vision benefits, 401K, FSA",
+    desc: "Vibrant work environment with team activities, and fostering fun",
   },
 
   {
     src: riding,
     title: "Life style",
-    desc: "No-premium health, dental, and vision benefits, 401K, FSA",
+    desc: "Achieve work-life balance with supportive and flexible culture",
   },
 ];
 const CareerPage = () => {
+  const history = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [history]);
   return (
     <>
       <Hero
         bg="https://www.key.com/content/dam/kco/images/businesses-institutions/industry-expertise/advisor_homepage_cropped.jpg"
         title="Career At tech"
         extra=""
-        desc="We help companies reach their full potential. Are you ready to reach yours? Come join us.We help companies reach their full potential."
+        desc="Discover endless possibilities for growth and learning in the ever-evolving world of software development at isolab."
         contact={false}
         page="about"
       />
       <Wrapper bg="#000">
-        <div className="container py-5" data-aos="fade-up">
-          <Wrapper
-            size="48px"
-            className="text-center text-white fs-1 text-capitalize fw-bold pt-5"
-          >
+        <div className="container py-5" data-aos="fade-down">
+          <div className="text-center text-white fs-1 text-capitalize fw-bold pt-5">
             Lets explore our capabilities together
-          </Wrapper>
-          <Wrapper size="18px" color="#16a092" className="text-center pt-3">
-            The href attribute requires a valid value to be accessible. Provide
-            a valid.
+          </div>
+          <Wrapper color="#16a092" className="text-center pt-3">
+            Quality is at the core of everything we do, ensuring robust and
+            reliable software solutions.
           </Wrapper>
         </div>
         <Wrapper

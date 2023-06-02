@@ -1,6 +1,6 @@
 import React from "react";
 import karl from "../../assets/karl.png";
-import devid from "../../assets/devid.png";
+import devid from "../../assets/devin.jpg";
 import styled from "styled-components";
 import { Wrapper, SpanWrapper } from "../Layouts";
 import { P, H2 } from "../Typography";
@@ -12,7 +12,7 @@ const TestimonialSection = styled.section`
 const TestimonialData = [
   {
     src: devid,
-    title: "Devin Sawyer",
+    title: "Devlin",
     desc: "I wanted to thank you all and the team for the great work on RobotDrop.Fun. It's a great site and works well now on Polygon. I have some work to do to finish the content site, robotdrop.nft, and upload/create the RobotDrop NFT collection for promoting the DEX, but overall, the functionality is working great and I am very impressed by the skills and commitment of this team!",
   },
   {
@@ -41,8 +41,8 @@ const Testimonial = () => {
             mb="20px"
             weight="700"
             ls="3px"
-            color="white"
             size="32px"
+            color="white"
             className="fs-1 text-center section-header"
           >
             Client Review
@@ -91,14 +91,14 @@ const Testimonial = () => {
                               <Wrapper size="18px" className="content">
                                 <P
                                   className="text-justify"
-                                  // fontFamily="Tinos, serif"
+                                 // fontFamily="Tinos, serif"
                                   size="18px"
-                                  // ls="1.5px"
-                                  lHeight="26px"
+                               // ls="1.5px"
+                               lHeight="26px"
                                 >
                                   <SpanWrapper
                                     color="#16a092"
-                                    size="28px"
+                                    size="24px"
                                     mr="20px"
                                   >
                                     <i className="fa fa-quote-left"></i>

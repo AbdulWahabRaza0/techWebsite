@@ -9,7 +9,7 @@ const LI = styled.li`
   width: 50%;
   margin-bottom: 12px;
   a {
-    color: #878787;
+    color: #fff;
     text-transform: capitalize;
     letter-spacing: 2px;
   }
@@ -46,7 +46,7 @@ const SocialI = styled.i`
   height: 40px;
   width: 40px;
   text-align: center;
-  line-height: 38px;
+  line-height: 40px;
   border-radius: 50%;
   font-size: 15px;
 `;
@@ -122,40 +122,43 @@ const SubmitBtn = styled.button`
   top: 0;
 `;
 const EmailInput = styled.input`
+  color: #ffffff;
   width: 100%;
   padding: 14px 28px;
   background: #2e2e2e;
   border: 1px solid #2e2e2e;
-  color: #fff;
+
+  margin-bottom: 20px;
 `;
 const H3Extra = styled(H3)`
   color: #fff;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 40px;
+  margin-top: 40px;
   &::before {
     content: "";
     position: absolute;
     left: 0;
     bottom: -15px;
-    height: 2px;
+    height: 3px;
     width: 50px;
     background: #16a092;
   }
 `;
 const ContactData = [
   {
-    title: "Find us",
+    title: "Location",
     desc: "address will be pasted here...",
     icon: "fas fa-map-marker-alt",
   },
   {
-    title: "Call us",
+    title: "Contact",
     desc: "0092 321 410 0000",
     icon: "fas fa-phone",
   },
   {
-    title: "Mail us",
+    title: "Email",
     desc: "info@tech.com",
     icon: "far fa-envelope-open",
   },
@@ -191,7 +194,7 @@ const Footer = () => {
                     <div
                       key={index}
                       className="col-xl-4 col-md-4 mb-30"
-                      data-aos="fade-down"
+                     
                     >
                       <Wrapper>
                         <i
@@ -207,13 +210,13 @@ const Footer = () => {
                           <H4
                             color="#fff"
                             size="20px"
-                            weight="600"
+                            weight="700"
                             mb="2px"
                             ls="3px"
                           >
                             {val.title}
                           </H4>
-                          <SpanWrapper color="#757575" size="15px" ls="1px">
+                          <SpanWrapper color="#dfe4ed" size="15px" ls="1px">
                             {val.desc}
                           </SpanWrapper>
                         </Wrapper>
@@ -241,32 +244,25 @@ const Footer = () => {
                       />
                     </a>
                   </div>
-                  <div className="footer-text" data-aos="fade-down">
+                  <div className="footer-text">
                     <P
-                      mb="14px"
+                      mb="54px"
                       size="14px"
                       color="#ffffff"
                       lHeight="21px"
                       ls="1px"
                     >
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.{" "}
+                      isolab empowers businesses with custom software
+                      solutions, agile teams, blockchain solutions, and
+                      E-Commerce websites. Our skilled professionals and
+                      cutting-edge tech deliver exceptional results for your
+                      success and growth. Let's transform your ideas into
+                      reality and embark on a digital transformation journey
+                      together.{" "}
                     </P>
                   </div>
                   <div className="footer-social-icon">
-                    <SpanWrapper
-                      className="d-block"
-                      color="#fff"
-                      size="20px"
-                      weight="700"
-                      mb="20px"
-                      fontFamily="Poppins, sans-serif"
-                    >
-                      Follow us
-                    </SpanWrapper>
+                    <H3Extra className="position-relative">Follow us</H3Extra>
                     <ul className="d-flex text-start mt-3">
                       {FooterSocialIcons.map((val, index) => {
                         return (
@@ -294,7 +290,7 @@ const Footer = () => {
                     {LinksData.map((val, index) => {
                       return (
                         <>
-                          <LI key={index} data-aos="flip-right">
+                          <LI key={index} >
                             <a href="#a">{val}</a>
                           </LI>
                         </>
@@ -310,11 +306,17 @@ const Footer = () => {
                   <div>
                     <H3Extra className="position-relative">Subscribe</H3Extra>
                   </div>
-                  <div className="footer-text mb-25">
-                    <p className="text-white">
-                      Don’t miss to subscribe to our new feeds, kindly fill the
-                      form below.
-                    </p>
+                  <div className="footer-text ">
+                    <P
+                      mb="14px"
+                      size="14px"
+                      color="#ffffff"
+                      lHeight="21px"
+                      ls="1px"
+                      className="text-white"
+                    >
+                      Don’t miss to subscribe to our new feeds, Reach us!
+                    </P>
                   </div>
                   <div className="subscribe-form position-relative overflow-hidden">
                     <form action="#" data-aos="fade-up">
@@ -338,9 +340,9 @@ const Footer = () => {
         <Wrapper bg="#202020" p="25px 0">
           <div className="container">
             <div className="row">
-              <div className="col-xl-6 col-lg-6 text-center text-lg-left">
+              <div className="col-xl-12 col-lg-12 text-center text-lg-left">
                 <div className="copyright-text">
-                  <P m="0px" size="14px" color="#878787">
+                  <P m="0px" size="14px" color="#fff">
                     Copyright &copy; 2023, All Right Reserved{" "}
                     <a style={{ color: "#16a092" }} href="#a">
                       tech
@@ -348,21 +350,21 @@ const Footer = () => {
                   </P>
                 </div>
               </div>
-              <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                <div className="footer-menu ">
+              {/* <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                <div className="footer-menu">
                   <ul>
                     {FooterMenuData.map((val, index) => {
                       return (
                         <>
                           <FooterMenuLI key={index}>
-                            <a href="#a">{val}</a>
+                            <a href="#">{val}</a>
                           </FooterMenuLI>
                         </>
                       );
                     })}
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </Wrapper>

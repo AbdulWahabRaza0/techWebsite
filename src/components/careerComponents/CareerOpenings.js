@@ -3,11 +3,11 @@ import angular from "../../assets/angular.png";
 import magento from "../../assets/magento.png";
 import android from "../../assets/android.png";
 import { Wrapper, useMediaQuery } from "../Layouts";
-import { P } from "../Typography";
+import { P, H6 } from "../Typography";
+import ModalComp from "../Modals.jsx";
+import { Spacer } from "../Spacer.jsx";
+import { InputStyle, TextAreaInputStyle } from "../Inputs.jsx";
 import styled from "styled-components";
-import ModalComp from "../Modal";
-import { Spacer } from "../Spacer";
-import { InputStyle, TextAreaInputStyle } from "../Inputs";
 const CareerListStyle = styled.li`
   font-family: ${(props) => (props.fontFamily ? props.fontFamily : "")};
   position: ${(props) => (props.position ? props.position : "")};
@@ -160,6 +160,16 @@ const CareerOpenings = () => {
     message: "",
   });
   const handleClose = () => setOpen(false);
+  const inputHandler = (e) => {
+    const { name, value } = e.target;
+    setValuesInput((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  const submitHandler = () => {
+    console.log("This is data ", valuesInput);
+  };
   return (
     <>
       <ModalComp
@@ -167,6 +177,7 @@ const CareerOpenings = () => {
         open={open}
         setOpen={setOpen}
         handleClose={handleClose}
+        submitHandler={submitHandler}
       >
         <Wrapper m="5px">
           <Spacer height="30px" />
@@ -178,6 +189,7 @@ const CareerOpenings = () => {
                   key={index}
                   data-aos="fade-up"
                   name={val.name}
+                  onChange={inputHandler}
                   value={
                     index === 0
                       ? valuesInput.name
@@ -216,18 +228,20 @@ const CareerOpenings = () => {
       </ModalComp>
       <Wrapper bg="#000">
         <div className="container">
-          <Wrapper
-            size="48px"
-            pt="5rem"
-            color="white"
-            className="text-center display-4 fw-bold"
-          >
-            Current Openings
-          </Wrapper>
-          <Wrapper size="18px" className="text-white text-center pt-3">
-            feel fulfilled.have fun.help us to shape the future
-          </Wrapper>
+          <div data-aos="fade-down">
+            <Wrapper
+              pt="5rem"
+              color="white"
+              className="text-center display-4 fw-bold"
+            >
+              Current Openings
+            </Wrapper>
 
+            <Wrapper color="#16a092" className="text-center pt-3">
+              Discover your next career move at isolab, where we are currently
+              hiring talented professionals
+            </Wrapper>
+          </div>
           {/* vacnacy */}
 
           <Wrapper mt="5rem">
@@ -247,10 +261,7 @@ const CareerOpenings = () => {
                         }`}
                         key={index}
                       >
-                        <Wrapper
-                          pb={isResponsive && "20px"}
-                          // className="job-card__info"
-                        >
+                        <Wrapper pb={isResponsive && "20px"}>
                           <div className="d-md-flex align-items-center">
                             <Wrapper
                               data-aos="zoom-in"
@@ -263,15 +274,14 @@ const CareerOpenings = () => {
                               <img
                                 src={val.src}
                                 height="100%"
-                                alt=""
                                 width="100%"
+                                alt=""
                                 style={{ objectFit: "contain" }}
                               />
                             </Wrapper>
                             <div>
                               <div className="d-flex align-items-center">
                                 <P
-                                  data-aos="flip-left"
                                   size="15px"
                                   color="white"
                                   weight="700"
@@ -281,7 +291,6 @@ const CareerOpenings = () => {
                                   {val.title}
                                 </P>
                                 <P
-                                  data-aos="flip-left"
                                   color="white"
                                   weight="700"
                                   lHeight="1.4"
@@ -297,7 +306,6 @@ const CareerOpenings = () => {
                                   {val.new}
                                 </P>
                                 <P
-                                  data-aos="flip-left"
                                   color="black"
                                   weight="700"
                                   lHeight="1.4"
@@ -323,16 +331,17 @@ const CareerOpenings = () => {
                           pt={isResponsive && "20px"}
                           pl={isResponsive ? "0px" : "20px"}
                           bt={isResponsive && "1px solid #939c9b"}
-                          data-aos="fade-up-left"
+                          data-aos="zoom-out"
                         >
                           <li>{val.city}</li>
                           <li>{val.time}</li>
+
                           <li
                             onClick={() => {
                               setOpen(true);
                               setValuesInput({
-                                name: "Admad",
-                                email: "ahmad@gmail.com",
+                                name: "",
+                                email: "",
                                 role: val.role,
                                 message: "",
                               });
@@ -348,13 +357,9 @@ const CareerOpenings = () => {
               </ul>
             </div>
           </Wrapper>
-          <Wrapper
-            size="18px"
-            className="weneed text-white text-center fs-4 py-4"
-          >
-            we are always on the lookout for talented folk to join our team
-            .follow us on linkedin!
-          </Wrapper>
+          <div className="weneed text-white text-center fs-4 py-4">
+            Join our team! Follow us on LinkedIn for career updates.
+          </div>
         </div>
       </Wrapper>
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 import imgdetails from "../../assets/imgdetails.png";
-import { Wrapper, Row, Col, useMediaQuery, SpanWrapper } from "../Layouts";
+import { Wrapper, Row, Col, SpanWrapper, useMediaQuery } from "../Layouts";
 import { PrimaryBtn } from "../Buttons";
 import { H1 } from "../Typography";
 const Details = (props) => {
@@ -11,7 +11,7 @@ const Details = (props) => {
     <Wrapper style={{ background: "#000" }} width="100%">
       <Wrapper pt="5rem" className="container">
         <Row className="align-items-center">
-          <Col md={6} data-aos="fade-right">
+          <Col md={6}>
             {props.page === "home" && (
               <>
                 {" "}
@@ -43,15 +43,17 @@ const Details = (props) => {
               {props.page === "home" && (
                 <>
                   {" "}
-                  We are a Creative Agency- By{" "}
+                  Revolutionize your brand's presence - By{" "}
                   <SpanWrapper weight="600">tech</SpanWrapper>
                 </>
               )}
               {props.page === "services" && (
                 <>
-                  <SpanWrapper size="21px" className="fw-bold">
-                    Web applications, portable applications, mixed undertakings,
-                    and then some.350 + projects | Since 2017
+                  <SpanWrapper size="19px" className="fw-bold">
+                    Web applications , cross-platform applications ,
+                    Decentralized Applications (DApps) , Artificial Intelligence
+                    (AI) and Machine Learning (ML) Solutions , and more. &nbsp;
+                    &nbsp;|&nbsp;&nbsp; Since 2017
                   </SpanWrapper>
                 </>
               )}
@@ -61,23 +63,24 @@ const Details = (props) => {
                 size="18px"
                 color="#bfcdd5"
                 pt="10px"
-                lh="1.7rem"
-                width="90%"
-                weight="300"
-                // fontFamily="Tinos, serif"
+                lh="1.5rem"
                 style={{
                   textJustify: "distribute-all-lines",
                   hyphens: "auto",
                   textAlign: "justify",
                 }}
-                className={isResponsive && "text-center"}
+                width="90%"
+                weight="300"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum hashchhchchc been the industry's standard
-                dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make a type specimen book. It
-                has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+                Empowering businesses with transformative software solutions and
+                driving growth. Our agile teams, custom software, blockchain
+                solutions, and E-Commerce websites have contributed to a
+                remarkable 300% increase in business growth. We specialize in
+                delivering tailored services that combine industry expertise
+                with cutting-edge technologies, ensuring high-quality and
+                scalable solutions. With a focus on agility and adaptability,
+                isolab is committed to helping businesses thrive in today's
+                digital landscape and achieve remarkable results.
               </Wrapper>
             )}
             {props.page === "services" && (
@@ -89,17 +92,23 @@ const Details = (props) => {
                   size="18px"
                   className={`mt-4 ${isResponsive && "ms-4"}`}
                 >
+                  <li>Drive innovation and stay ahead in your industry. </li>
                   <li>
-                    Advanced tech stack such as
-                    Elixir,ruby-on-rails,flutter,kotlin,lonic,mean,python etc{" "}
+                    Gain a competitive edge through customized software
+                    solutions.{" "}
                   </li>
                   <li>
-                    intregration of advanced technologies such as artificial
-                    intelligence,big data etc{" "}
+                    Maximize productivity and profitability with custom software
+                    solutions.
                   </li>
-                  <li>Daily stand-up meetings with products managers </li>
-                  <li>Staffing with 2 weaks </li>
-                  <li> try risk free-trial </li>
+                  <li>
+                    Accelerate industry-specific growth with custom software.
+                  </li>
+                  <li>
+                    {" "}
+                    Leverage industry-specific expertise in software
+                    development.
+                  </li>
                 </Wrapper>
               </>
             )}
@@ -107,24 +116,23 @@ const Details = (props) => {
             <PrimaryBtn
               pt="7px"
               pb="7px"
-              width="150px"
               className={`btn ${
                 isResponsive &&
                 "d-flex flex-row w-100 justify-content-center mb-5"
               }`}
             >
-              <a href="#About" className="text-white text-decoration-none">
+              <a href="#About" className="text-white text-decoration-none px-4">
                 {props.btnName}
               </a>
             </PrimaryBtn>
           </Col>
-          <Col md={6} data-aos="fade-left">
+          <Col md={6} data-aos="flip-left">
             {props.page === "home" && (
               <Wrapper
-                mt={isResponsive && "2rem"}
+                mt={isResponsive ? "2rem" : "5rem"}
                 className="d-flex justify-content-end"
               >
-                <img src={imgdetails} alt="" className="w-100 " />
+                <img src={imgdetails} alt="tech" className="w-100 " />
               </Wrapper>
             )}
             {props.page === "services" && (
@@ -135,10 +143,11 @@ const Details = (props) => {
                 <div>
                   <H1
                     size="48px"
-                    className="text-center display-5 fw-bold text-white "
+                    className="text-center display-5 fw-bold text-white"
                   >
                     GROW YOUR BUSSINESS
                   </H1>
+
                   <Wrapper
                     size="18px"
                     weight="500"
@@ -150,11 +159,13 @@ const Details = (props) => {
                       textAlign: "justify",
                     }}
                   >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    Don't let your competitors surge ahead while you lag behind.
+                    It's time to seize the opportunity to expand your horizons,
+                    increase your market share, and skyrocket your profits. With
+                    our strategic expertise and innovative technology, we'll
+                    equip you with the tools you need to outperform the
+                    competition, unlock new avenues of growth, and transform
+                    your business into an unstoppable force.
                   </Wrapper>
                 </div>
               </Wrapper>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Wrapper, useMediaQuery } from "../Layouts";
 import styled from "styled-components";
-import { H1 } from "../Typography";
 const TestimonialStyle = styled.section`
   background: transparent;
   padding-top: 5rem;
@@ -189,17 +188,19 @@ const TestimonialStyle = styled.section`
 const PointsLI = styled.li`
   color: rgba(240, 248, 255, 0.604);
   font-size: 20px;
-  font-weight: 400;
   line-height: 3rem;
   text-transform: capitalize;
 `;
 const PointsLIData = [
-  "to make your workforce a security front line",
-  "5 creative ways to address gaps in IT resources and talent",
-  "The top 13 benefits of proactive managed services vs reactive break-fix The top 13 benefits of proactive managed",
-  "4 ways compsec pros protect their computers",
-  "5 creative ways to address gaps in IT resources and talent",
-  "to make your workforce a security front line",
+  "Collaborative work environment fostering creativity and innovation",
+  "Emphasis on delivering high-quality software solutions.",
+  "Commitment to adhering to industry standards and best practices.",
+  "Encouragement of professional growth and continuous learning.",
+  "Strong focus on user-centered design and intuitive interfaces.",
+  " Cultivation of a supportive and respectful work culture.",
+  "Dedication to meeting project deadlines and delivering on time.",
+  " Adherence to accessibility standards to ensure inclusivity.",
+  " Proactive problem-solving approach to address challenges efficiently.",
 ];
 const TestimonialData = [
   "https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-01-179x179.png",
@@ -216,7 +217,7 @@ const AboutTes = () => {
         <TestimonialStyle>
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 d-none d-lg-block" data-aos="fade-up">
+              <div className="col-lg-6 d-none d-lg-block" data-aos="fade-right">
                 <ol
                   className="carousel-indicators tabs"
                   style={{ marginRight: isResponsive && "25px" }}
@@ -241,20 +242,17 @@ const AboutTes = () => {
               </div>
               <div className="col-lg-6 d-flex justify-content-center align-items-center">
                 <div
-                  data-aos="fade-down"
+                 
                   id="carouselExampleIndicators"
                   data-interval="false"
                   className="carousel slide"
                   data-ride="carousel"
-                >
-                  <H1
-                    size="45px"
-                    weight="900"
-                    className="text-white text-capitalize fs-1 "
-                  >
+                > <div  data-aos="fade-down">
+                  <h1 className="text-white text-capitalize fs-1" >
                     Whats Going At tech ?{" "}
-                  </H1>
-                  <Wrapper className="points">
+                  </h1>
+                  </div>
+                  <div className="points">
                     <ul style={{ paddingTop: "3rem" }}>
                       {PointsLIData.map((val, index) => {
                         return (
@@ -264,7 +262,7 @@ const AboutTes = () => {
                         );
                       })}
                     </ul>
-                  </Wrapper>
+                  </div>
                 </div>
               </div>
             </div>

@@ -46,16 +46,16 @@ const IndustriesCard = (props) => {
                         />
                         <H6
                           size={props.page === "career" && "21px"}
-                          weight="600"
                           className="mt-3"
+                          weight="600"
                         >
                           {val.title}
                         </H6>
                         {props.page === "career" && (
                           <>
                             <P size="14px">
-                              No-premium health, dental, and vision benefits,
-                              401K, FSA
+                              {val.desc}
+                              
                             </P>
                           </>
                         )}

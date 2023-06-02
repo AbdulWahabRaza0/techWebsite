@@ -10,38 +10,31 @@ const AboutContact = () => {
         <div className="container pt-5">
           <div className="d-flex justify-content-center">
             <div className="mm">
-              <H4
-                size="32px"
-                color="#16a092"
-                className="text-center"
-                data-aos="fade-up"
-              >
-                Let's Started
+              <H4 color="#16a092" className="text-center" data-aos="fade-down">
+                {" "}
+                Let's Get Started
               </H4>
-              <Wrapper
-                weight="600"
-                size="45px"
+              <div
                 className="fs-1 about-heading text-white text-center"
-                data-aos="fade-up"
+                data-aos="fade-down"
               >
-                Are you ready for a better,more <br /> productive business ?
-              </Wrapper>
+               Are you ready to take your business to new heights  <br /> of efficiency and productivity? <br /> 
+              </div>
               <Wrapper
-                size="18px"
-                color="gray"
-                className="p-about pt-3 text-center"
-                weight="600"
-                data-aos="fade-up"
-              >
+                         color="#ffffff"
+                         size="20px"
+                         className="text-center p-about pt-4"
+
+>
                 Stop worrying about technology problems. Focus on your
-                business.Let us <br /> provide the support you deserve.
+                business.<br />  Let us provide the support you deserve.
               </Wrapper>
               <div
                 className="btn-start d-flex justify-content-center"
-                data-aos="zoom-in"
+           
               >
                 <Link>
-                  <PrimaryBtn className="rounded btn text-white px-4 py-1 fs-5 fw-bold">
+                  <PrimaryBtn className="rounded btn text-white fs-5 fw-bold">
                     Contact Us{" "}
                   </PrimaryBtn>
                 </Link>

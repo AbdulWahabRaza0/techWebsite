@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Details from "../components/Common/Details";
 import HeroSection from "../components/HomeComponents/HeroSection";
 import ServicesSec from "../components/Common/ServicesSec";
@@ -20,6 +20,7 @@ import hospital from "../assets/hospital.png";
 import binance from "../assets/binance.png";
 import { Wrapper } from "../components/Layouts";
 import { H2 } from "../components/Typography";
+import { useNavigate } from "react-router-dom";
 const IndustryData = [
   { src: banking, title: "Banking" },
 
@@ -34,44 +35,49 @@ const IndustryData = [
 
   { src: banking, title: "Banking" },
 ];
+
 const ServiceCardsData = [
   {
     src: blockchain,
     title: "Blockchain Web3",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quisquam consequatur necessitatibus eaque.",
+    desc: "Empower your business with secure and transparent decentralized solutions for seamless transaction management.",
   },
   {
     src: ai,
     title: "Artificial Intelligence",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quisquam consequatur necessitatibus eaque",
+    desc: "Utilize advanced artificial intelligence algorithms and machine learning models to extract valuable insights.",
   },
   {
     src: devops,
     title: "DevOps",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quisquam consequatur necessitatibus eaque",
+    desc: "Streamline software development and deployment processes, ensuring efficient collaboration, accelerated delivery, and superior outcomes.",
   },
   {
     src: datasci,
     title: "Data Science",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam consequatur necessitatibus eaque.",
+    desc: "Extract meaningful insights from data using advanced analytics techniques, driving informed decision-making and business growth.",
   },
   {
     src: ecommerce,
-    title: "Ecommerce",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quisquam consequatur necessitatibus eaque.",
+    title: "E-Commerce",
+    desc: "Build engaging user-friendly online stores for seamless digital shopping experiences and accelerated business growth.",
   },
   {
     src: iot,
     title: "Internet of things",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quisquam consequatur necessitatibus eaque.",
+    desc: "Connect and control devices seamlessly, enabling smarter operations and unlocking new possibilities for automation.",
   },
 ];
 
 const Home = () => {
+  const history = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [history]);
   return (
     <>
       <HeroSection />
-      <Details title="tech" page="home" btnName="Let' talk" />
+      <Details title="tech" page="home" btnName="Initiate Consultation" />
       <ServicesSec data={ServiceCardsData} heading={true} page="home" />
       <DeliveredSec />
       <HugeSec />
@@ -91,7 +97,6 @@ const Home = () => {
             Managed IT Services customized for your industry
           </H2>
         </Wrapper>
-
         <IndustriesCard data={IndustryData} />
       </Wrapper>
       <Testimonial />

@@ -4,8 +4,8 @@ const HeaderBtn = styled.button`
   border: ${(props) =>
     props.scrollBtn ? "2px solid #16a092" : "2px solid white"};
   font-weight: bold;
-  font-size: 16px;
   background: transparent;
+  font-size: 16px;
   padding: 9px 25px;
   text-transform: uppercase;
   border-radius: 10px;

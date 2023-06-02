@@ -1,6 +1,5 @@
 //typography
 import styled from "styled-components";
-
 const H1 = styled.h1`
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-ExtraBold', sans-serif"};
@@ -26,9 +25,9 @@ const H1 = styled.h1`
   border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H2 = styled.h2`
+  font-style: normal;
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-ExtraBold', sans-serif"};
-  font-style: normal;
   text-transform: ${(props) => (props.tt ? props.tt : "")};
   font-weight: ${(props) => (props.weight ? props.weight : "")};
   line-height: ${(props) => (props.lHeight ? props.lHeight : "")};
@@ -50,9 +49,9 @@ const H2 = styled.h2`
   border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H3 = styled.h3`
+  font-style: normal;
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-ExtraBold', sans-serif"};
-  font-style: normal;
   text-transform: ${(props) => (props.tt ? props.tt : "")};
   font-weight: ${(props) => (props.weight ? props.weight : "")};
   line-height: ${(props) => (props.lHeight ? props.lHeight : "")};
@@ -74,9 +73,9 @@ const H3 = styled.h3`
   border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H4 = styled.h4`
+  font-style: normal;
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-Light', sans-serif"};
-  font-style: normal;
   text-transform: ${(props) => (props.tt ? props.tt : "")};
   font-weight: ${(props) => (props.weight ? props.weight : "")};
   line-height: ${(props) => (props.lHeight ? props.lHeight : "")};
@@ -100,7 +99,6 @@ const H4 = styled.h4`
 const H5 = styled.h5`
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-Light', sans-serif"};
-  font-style: normal;
   text-transform: ${(props) => (props.tt ? props.tt : "")};
   font-weight: ${(props) => (props.weight ? props.weight : "")};
   line-height: ${(props) => (props.lHeight ? props.lHeight : "")};
@@ -122,9 +120,9 @@ const H5 = styled.h5`
   border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const H6 = styled.h6`
+  font-style: normal;
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-Light', sans-serif"};
-  font-style: normal;
   text-transform: ${(props) => (props.tt ? props.tt : "")};
   font-weight: ${(props) => (props.weight ? props.weight : "")};
   line-height: ${(props) => (props.lHeight ? props.lHeight : "")};
@@ -146,12 +144,12 @@ const H6 = styled.h6`
   border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const P = styled.p`
+  font-style: normal;
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "'Gilroy-Light', sans-serif"};
-  font-style: normal;
   text-transform: ${(props) => (props.tt ? props.tt : "")};
   font-weight: ${(props) => (props.weight ? props.weight : "")};
-  line-height: ${(props) => (props.lHeight ? props.lHeight : "18px")};
+  line-height: ${(props) => (props.lHeight ? props.lHeight : "24px")};
   font-size: ${(props) => (props.size ? props.size : "18px")};
   color: ${(props) => (props.color ? props.color : "")};
   text-decoration: ${(props) => (props.td ? props.td : "")};
