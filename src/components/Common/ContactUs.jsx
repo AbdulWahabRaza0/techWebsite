@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import building from "../../assets/building.png";
 import { Wrapper, useMediaQuery } from "../Layouts";
 import { H1, P } from "../Typography";
@@ -51,6 +51,29 @@ const ContactUs = () => {
   const isResponsiveLow = useMediaQuery({
     query: "(max-width: 1000px)",
   });
+  const [contactData, setContactData] = useState({
+    name: "",
+    email: "ahmad@authornate.com",
+    subject: "",
+    message: "",
+  });
+  const inputHandle = (e) => {
+    const { name, value } = e.target;
+    setContactData((prevStates) => ({
+      ...prevStates,
+      [name]: value,
+    }));
+  };
+  const SubmitHandler = (e) => {
+    e.preventDefault();
+    console.log("This is data ", contactData);
+    setContactData({
+      name: "",
+      email: "ahmad@authornate.com",
+      subject: "",
+      message: "",
+    });
+  };
   return (
     <>
       <ContactSection bg="#000">
@@ -87,14 +110,37 @@ const ContactUs = () => {
               :032219903230 or email: info@tech.com
             </P>
             <form className="position-relative mt-2" action="">
-              <InputStyle type="" placeholder="Your Name" required />
-              <InputStyle type="" placeholder="Your Email" required />
-              <InputStyle type="" placeholder="write a subject" required />
+              <InputStyle
+                type="text"
+                name="name"
+                value={contactData.name}
+                onChange={inputHandle}
+                placeholder="Your Name"
+                required
+              />
+              <InputStyle
+                type="text"
+                name="email"
+                // onChange={inputHandle}
+                value={contactData.email}
+                placeholder="Your Email"
+                required
+              />
+              <InputStyle
+                type="text"
+                name="subject"
+                onChange={inputHandle}
+                value={contactData.subject}
+                placeholder="write a subject"
+                required
+              />
               <TextAreaStyle
-                name=""
+                name="message"
                 id=""
                 cols="30"
                 rows="10"
+                onChange={inputHandle}
+                value={contactData.message}
                 placeholder="Your message"
                 required
               ></TextAreaStyle>
@@ -104,8 +150,9 @@ const ContactUs = () => {
                 hoverTransform="scale(1.1)"
                 bg="#16a092"
                 weight="700"
-                className="btn btn-simision text-white ps-5 pe-5 mb-3"
+                className="btn btn-simision text-white ps-5 pe-5 mb-3 mt-2"
                 style={{ border: "1px solid #16a092" }}
+                onClick={SubmitHandler}
               >
                 Submit
               </PrimaryBtn>

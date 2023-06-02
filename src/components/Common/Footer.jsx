@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import tech from "../../assets/tech.png";
 import { Wrapper, SpanWrapper, Row, Col, useMediaQuery } from "../Layouts";
 import { H3, H4, P } from "../Typography";
@@ -185,6 +185,11 @@ const Footer = () => {
   const isResponsive = useMediaQuery({
     query: "(max-width: 753px)",
   });
+  const [email, setEmail] = useState("");
+  const SubmitHandler = (e) => {
+    e.preventDefault();
+    console.log("Submitted...");
+  };
   return (
     <>
       <Wrapper bg="#000000" className="position-relative">
@@ -329,8 +334,16 @@ const Footer = () => {
                   </div>
                   <div className="subscribe-form position-relative overflow-hidden">
                     <form action="#" data-aos="fade-up">
-                      <EmailInput type="text" placeholder="Email Address" />
-                      <SubmitBtn>
+                      <EmailInput
+                        name="email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                        }}
+                        placeholder="Email Address"
+                      />
+                      <SubmitBtn onClick={SubmitHandler}>
                         <i
                           style={{
                             fontSize: "22px",
