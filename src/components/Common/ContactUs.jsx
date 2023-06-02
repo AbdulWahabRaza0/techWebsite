@@ -54,7 +54,6 @@ const ContactUs = () => {
   return (
     <>
       <ContactSection bg="#000">
-
         <ContactFormStyle
           p={isResponsiveHighest ? "0px 3%" : "0px 15%"}
           transition={
@@ -88,23 +87,9 @@ const ContactUs = () => {
               :032219903230 or email: info@tech.com
             </P>
             <form className="position-relative mt-2" action="">
-            <InputStyle
-                
-                type=""
-                placeholder="Your Name"
-                required
-              />
-              <InputStyle
-                
-                type=""
-                placeholder="Your Email"
-                required
-              />
-              <InputStyle
-                type=""
-                placeholder="write a subject"
-                required
-              />
+              <InputStyle type="" placeholder="Your Name" required />
+              <InputStyle type="" placeholder="Your Email" required />
+              <InputStyle type="" placeholder="write a subject" required />
               <TextAreaStyle
                 name=""
                 id=""
@@ -119,7 +104,7 @@ const ContactUs = () => {
                 hoverTransform="scale(1.1)"
                 bg="#16a092"
                 weight="700"
-                className="btn btn-simision text-white ps-5 pe-5"
+                className="btn btn-simision text-white ps-5 pe-5 mb-3"
                 style={{ border: "1px solid #16a092" }}
               >
                 Submit
@@ -128,7 +113,7 @@ const ContactUs = () => {
           </Wrapper>
           <Wrapper>
             <img
-            data-aos="fade-up-left"
+              data-aos="fade-up-left"
               style={{
                 maxWidth: "100%",
                 borderRadius: "10px",

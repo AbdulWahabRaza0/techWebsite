@@ -1,6 +1,7 @@
 import React from "react";
 import { Wrapper, useMediaQuery } from "../Layouts";
 import styled from "styled-components";
+import { H1 } from "../Typography";
 const TestimonialStyle = styled.section`
   background: transparent;
   padding-top: 5rem;
@@ -187,8 +188,8 @@ const TestimonialStyle = styled.section`
 `;
 const PointsLI = styled.li`
   color: rgba(240, 248, 255, 0.604);
-  font-size: 20px;
-  line-height: 3rem;
+  font-size: ${(props) => (props.size ? props.size : "20px")};
+  line-height: ${(props) => (props.lHeight ? props.lHeight : "3rem")};
   text-transform: capitalize;
 `;
 const PointsLIData = [
@@ -210,6 +211,9 @@ const TestimonialData = [
 const AboutTes = () => {
   const isResponsive = useMediaQuery({
     query: "(max-width: 1200px)",
+  });
+  const isResponsiveMobile = useMediaQuery({
+    query: "(max-width: 753px)",
   });
   return (
     <>
@@ -242,22 +246,36 @@ const AboutTes = () => {
               </div>
               <div className="col-lg-6 d-flex justify-content-center align-items-center">
                 <div
-                 
                   id="carouselExampleIndicators"
                   data-interval="false"
                   className="carousel slide"
                   data-ride="carousel"
-                > <div  data-aos="fade-down">
-                  <h1 className="text-white text-capitalize fs-1" >
-                    Whats Going At tech ?{" "}
-                  </h1>
+                >
+                  {" "}
+                  <div data-aos="fade-down">
+                    <H1
+                      size={isResponsiveMobile && "26px !important"}
+                      className="text-white text-capitalize fs-1"
+                    >
+                      Whats Going At tech ?{" "}
+                    </H1>
                   </div>
                   <div className="points">
-                    <ul style={{ paddingTop: "3rem" }}>
+                    <ul
+                      style={{
+                        paddingTop: isResponsiveMobile ? "1rem" : "3rem",
+                      }}
+                    >
                       {PointsLIData.map((val, index) => {
                         return (
                           <>
-                            <PointsLI key={index}>{val}</PointsLI>
+                            <PointsLI
+                              size={isResponsiveMobile && "16px"}
+                              lHeight={isResponsiveMobile && "2rem"}
+                              key={index}
+                            >
+                              {val}
+                            </PointsLI>
                           </>
                         );
                       })}
