@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Hero from "../components/Common/Hero";
 import AboutSer from "../components/AboutComponent/AboutSer";
+import CoreValues from "../components/AboutComponent/CoreValues";
 import History from "../components/AboutComponent/History";
 import AboutTes from "../components/AboutComponent/AboutTes";
 import AboutContact from "../components/AboutComponent/AboutContact";
@@ -22,7 +23,9 @@ const About = () => {
         contact={true}
       />
       <AboutSer />
+
       <History />
+      <CoreValues />
       <AboutTes />
       <AboutContact />
     </>
