@@ -5,6 +5,7 @@ import CoreValues from "../components/AboutComponent/CoreValues";
 import History from "../components/AboutComponent/History";
 import AboutTes from "../components/AboutComponent/AboutTes";
 import AboutContact from "../components/AboutComponent/AboutContact";
+import AboutService from "../components/AboutComponent/AboutService";
 import { useNavigate } from "react-router-dom";
 const About = () => {
   const history = useNavigate();
@@ -27,6 +28,7 @@ const About = () => {
       <History />
       <CoreValues />
       <AboutTes />
+      <AboutService />
       <AboutContact />
     </>
   );
