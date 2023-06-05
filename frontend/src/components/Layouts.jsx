@@ -31,6 +31,8 @@ const Wrapper = styled.div`
   flex: ${(props) => (props.flex ? props.flex : "")};
   max-width: ${(props) => (props.maxW ? props.maxW : "")};
   min-width: ${(props) => (props.minW ? props.minW : "")};
+  border: ${(props) => (props.border ? props.border : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const SpanWrapper = styled.span`
   font-style: normal;
@@ -63,6 +65,8 @@ const SpanWrapper = styled.span`
   flex: ${(props) => (props.flex ? props.flex : "")};
   max-width: ${(props) => (props.maxW ? props.maxW : "")};
   min-width: ${(props) => (props.minW ? props.minW : "")};
+  border: ${(props) => (props.border ? props.border : "")};
+  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
 `;
 const Card = styled.div`
   width: 100%;

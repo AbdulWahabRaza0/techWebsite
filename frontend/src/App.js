@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Wrapper, useMediaQuery } from "./components/Layouts";
 import Aos from "aos";
 import { ToastContainer } from "react-toastify";
+import { PopupButton, InlineWidget, PopupWidget } from "react-calendly";
 import styled from "styled-components";
 import "aos/dist/aos.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -40,27 +41,39 @@ const App = () => {
         draggable
         pauseOnHover
       />
+
       <ResponsiveOverflow overflow={isResponsive && "hidden !important"}>
         <Wrapper
           style={{
             position: "fixed",
             bottom: "5%",
-            right: "5%",
+            right: "2.5%",
             zIndex: 10,
           }}
         >
-          <a
-            href="https://api.whatsapp.com/send?phone=+923214100432&text=Hi, Bilal Iqbal!"
-            class="whatsapp-button"
-            target="_blank"
-            rel="noreferrer"
-            style={{ bottom: "15px" }}
-          >
-            <img
-              src="https://i.ibb.co/VgSspjY/whatsapp-button.png"
-              alt="whatsapp"
+          <Wrapper>
+            <a
+              href="https://api.whatsapp.com/send?phone=+923214100432&text=Hi, Bilal Iqbal!"
+              class="whatsapp-button"
+              target="_blank"
+              rel="noreferrer"
+              style={{ bottom: "15px" }}
+            >
+              <img
+                src="https://i.ibb.co/VgSspjY/whatsapp-button.png"
+                alt="whatsapp"
+              />
+            </a>
+          </Wrapper>
+          <Wrapper className="mt-5">
+            <PopupWidget
+              url="https://calendly.com/abdulwahabraza"
+              rootElement={document.getElementById("root")}
+              text="Click here to schedule!"
+              textColor="#ffffff"
+              color="#16a092"
             />
-          </a>
+          </Wrapper>
         </Wrapper>
 
         <Router>
