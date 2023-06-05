@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import angular from "../../assets/angular.png";
 import magento from "../../assets/magento.png";
 import android from "../../assets/android.png";
@@ -8,6 +8,8 @@ import ModalComp from "../Modals.jsx";
 import { Spacer } from "../Spacer.jsx";
 import { InputStyle, TextAreaInputStyle } from "../Inputs.jsx";
 import styled from "styled-components";
+import { toast } from "react-toastify";
+import axios from "axios";
 const CareerListStyle = styled.li`
   font-family: ${(props) => (props.fontFamily ? props.fontFamily : "")};
   position: ${(props) => (props.position ? props.position : "")};
@@ -159,6 +161,7 @@ const CareerOpenings = () => {
     role: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
   const handleClose = () => setOpen(false);
   const inputHandler = (e) => {
     const { name, value } = e.target;
@@ -167,8 +170,78 @@ const CareerOpenings = () => {
       [name]: value,
     }));
   };
-  const submitHandler = () => {
-    console.log("This is data ", valuesInput);
+  const submitHandler = async (e) => {
+    e.preventDefault();
+
+    try {
+      if (
+        valuesInput.name &&
+        valuesInput.email &&
+        valuesInput.role &&
+        valuesInput.message
+      ) {
+        setLoading(true);
+        const config = {
+          headers: {
+            "Content-type": `application/json`,
+          },
+        };
+        const contactData = {
+          name: valuesInput.name,
+          email: valuesInput.email,
+          subject: valuesInput.role,
+          message: valuesInput.message,
+        };
+        const res = await axios.post(
+          "http://localhost:8000/contact",
+          { contactData },
+          config
+        );
+        if (res.status === 200) {
+          setLoading(false);
+          toast.success("Mail Sent Sucessfully!", {
+            className: "set_notify",
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        } else {
+          setLoading(false);
+          toast.error("Invalid Error!", {
+            className: "set_notify",
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      }
+      setValuesInput({
+        name: "",
+        email: "",
+        role: valuesInput.role,
+        message: "",
+      });
+    } catch (e) {
+      setLoading(false);
+      toast.error("Invalid Error!", {
+        className: "set_notify",
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
   };
   return (
     <>
@@ -178,6 +251,7 @@ const CareerOpenings = () => {
         setOpen={setOpen}
         handleClose={handleClose}
         submitHandler={submitHandler}
+        loading={loading}
       >
         <Wrapper m="5px">
           <Spacer height="30px" />

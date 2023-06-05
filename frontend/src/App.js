@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Wrapper, useMediaQuery } from "./components/Layouts";
 import Aos from "aos";
 import { ToastContainer } from "react-toastify";
-import { PopupButton, InlineWidget, PopupWidget } from "react-calendly";
+import { PopupWidget } from "react-calendly";
 import styled from "styled-components";
 import "aos/dist/aos.css";
 import "react-toastify/dist/ReactToastify.css";

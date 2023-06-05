@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Wrapper } from "./Layouts";
 import { PrimaryBtn } from "./Buttons";
 import Box from "@mui/material/Box";
@@ -19,6 +20,7 @@ const ModalComp = (props) => {
     outline: "none",
     p: 4,
   };
+
   return (
     <>
       <Modal
@@ -42,8 +44,10 @@ const ModalComp = (props) => {
             <PrimaryBtn
               data-aos="zoom-in"
               hoverBg="transparent"
-              bg="#16a092"
-              className="btn btn-simision text-white ps-4 pt-1 pe-4 fw-bold"
+              bg={props.loading ? "transparent !important" : "#16a092"}
+              className={`btn btn-simision text-white ps-4 pt-1 pe-4 fw-bold ${
+                props.loading && "disabled"
+              }`}
               style={{ border: "1px solid #16a092", fontSize: "21px" }}
             >
               Submit
