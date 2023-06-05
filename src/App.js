@@ -1,69 +1,49 @@
-import React, { useEffect } from "react";
-import Home from "../src/pages/Home";
-import Header from "./components/Common/Header";
-import Footer from "./components/Common/Footer";
-import About from "./pages/About";
-import ServicesPage from "./pages/ServicesPage";
-import CareerPage from "./pages/CareerPage";
-import LetsTalkPage from "./pages/LetsTalkPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Wrapper, useMediaQuery } from "./components/Layouts";
-import Aos from "aos";
-import styled from "styled-components";
-import "aos/dist/aos.css";
-const ResponsiveOverflow = styled(Wrapper)`
-  * {
-    overflow: ${(props) => (props.overflow ? props.overflow : "")};
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+var nodemailer = require("nodemailer");
+const app = express();
+app.use(cors());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+var transporter = nodemailer.createTransport({
+  service: "gmail",
+  secure: "false",
+  auth: {
+    user: process.env.email,
+    pass: process.env.password,
+  },
+});
+app.get("/", (req, res) => {
+  res.send("Hello from server");
+});
+app.post("/contact", (req, res) => {
+  try {
+    const { name, subject, message, email } = req.body.contactData;
+    if (name && subject && message && email) {
+      var mailOptions = {
+        from: email,
+        to: process.env.email,
+        subject: subject,
+        text: message,
+      };
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+          res.status(400).json({ message: "Unknown Error" });
+        } else {
+          console.log("Email sent: " + info.response);
+          res.status(200).json({ message: "Messgage Succesfully Sended" });
+        }
+      });
+    } else {
+      res.status(400).json({ message: "Insufficient Details" });
+    }
+  } catch (e) {
+    res.status(400).json({ message: "Unknown Error" });
   }
-  overflow: ${(props) => (props.overflow ? props.overflow : "")};
-`;
-const App = () => {
-  const isResponsive = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-  return (
-    <>
-     <ResponsiveOverflow overflow={isResponsive && "hidden !important"}>
-        <Wrapper
-             style={{
-              position: "fixed",
-              bottom: "5%",
-              right: "5%",
-              zIndex: 10,
-            }}
-        >
-          <a
-            href="https://api.whatsapp.com/send?phone=+923214100432&text=Hi, Bilal Iqbal!"
-            class="whatsapp-button"
-            target="_blank"
-            rel="noreferrer"
-            style={{ bottom: "15px" }}
-          >
-            <img
-              src="https://i.ibb.co/VgSspjY/whatsapp-button.png"
-              alt="whatsapp"
-            />
-          </a>
-        </Wrapper>
-
-        <Router>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/Service" element={<ServicesPage />} />
-            <Route path="/Career" element={<CareerPage />} />
-            <Route path="/contact" element={<LetsTalkPage />} />
-          </Routes>
-
-          <Footer />
-        </Router>
-        </ResponsiveOverflow>
-    </>
-  );
-};
-
-export default App;
+});
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log(`Listening to PORT=>${port}`);
+});
